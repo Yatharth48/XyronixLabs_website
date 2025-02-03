@@ -14,26 +14,29 @@ This repository contains the source code for the XyronixLabs website, built with
 ## Installation
 
 ### Prerequisites
-
+```sh
 - Python 3.8+
 - Node.js 14+
 - Yarn
 - OpenSSL
 - Nginx
-
+```
 ### Backend (Django)
 
 1. Clone the repository:
    ```sh
    git clone https://github.com/yourusername/xyronixlabs-website.git
    cd xyronixlabs-website/server
+   ```
 2. Create a virtual environment and activate it:
     ```sh
     python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    source venv/bin/activate  #On Windows use `venv\Scripts\activate`
+    ```
 3. Install the required Python packages:
     ```sh
     pip install -r requirements.txt
+    ```
 4. Apply migrations:
     ```sh
     python manage.py migrate
@@ -140,50 +143,58 @@ This repository contains the source code for the XyronixLabs website, built with
 ### Configuration
 ## Django Settings
 # Update the settings.py file with your configuration:
-```sh
-# filepath: /c:/Users/adity/OneDrive/Desktop/XyronixLabs_website/server/server/settings.py
-SECRET_KEY = 'your-secret-key'
-DEBUG = True  # Set to False in production
-ALLOWED_HOSTS = ['xyronixlabs.com', 'www.xyronixlabs.com', 'localhost', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = [
-    'https://xyronixlabs.com',
-    'https://www.xyronixlabs.com',
-    'https://localhost',
-    'http://localhost:3000',
-    'http://192.168.1.7:3000'
-]
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://192.168.1.7:3000",
-    "https://xyronixlabs.com",
-    "https://www.xyronixlabs.com"
-]
-```
+  ```sh
+  #filepath: /c:/Users/adity/OneDrive/Desktop/XyronixLabs_website/server/server/settings.py
+  SECRET_KEY = 'your-secret-key'
+  DEBUG = True  #Set to False in production
+  ALLOWED_HOSTS = ['xyronixlabs.com', 'www.xyronixlabs.com', 'localhost', '127.0.0.1']
+  CSRF_TRUSTED_ORIGINS = [
+      'https://xyronixlabs.com',
+      'https://www.xyronixlabs.com',
+      'https://localhost',
+      'http://localhost:3000',
+      'http://192.168.1.7:3000'
+  ]
+  CORS_ALLOWED_ORIGINS = [
+      "http://localhost:3000",
+      "http://192.168.1.7:3000",
+      "https://xyronixlabs.com",
+      "https://www.xyronixlabs.com"
+  ]
+  ```
 
 ## Proxy Configuration
 # Create a setupProxy.js file in the src directory of your React project:
-```sh
-// filepath: /c:/Users/adity/OneDrive/Desktop/XyronixLabs_website/client/src/setupProxy.js
-const { createProxyMiddleware } = require('http-proxy-middleware');
-
-module.exports = function(app) {
-  app.use(
-    '/api',
-    createProxyMiddleware({
-      target: 'http://localhost:8000',
-      changeOrigin: true,
-    })
-  );
-};
-```
+  ```sh
+  #filepath: /c:/Users/adity/OneDrive/Desktop/XyronixLabs_website/client/src/setupProxy.js
+  const { createProxyMiddleware } = require('http-proxy-middleware');
+  
+  module.exports = function(app) {
+    app.use(
+      '/api',
+      createProxyMiddleware({
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      })
+    );
+  };
+  ```
 
 ### Usage
 ## Accessing the Application
-# 1. Backend: https://localhost:8000
-# 2. Frontend: http://localhost:3000
-
+# Backend: 
+  ```sh 
+  https://localhost:8000
+  ```
+# Frontend: 
+  ```sh
+  http://localhost:3000
+  ```
 ## Admin Panel
-# Access the Django admin panel at https://localhost:8000/admin and log in with the superuser credentials.
-
+# Access the Django admin panel at 
+  ```sh
+  https://localhost:8000/admin
+  ```
+# and log in with the superuser credentials.
 ## License
 # This project is licensed under the MIT License. See the LICENSE file for details.
