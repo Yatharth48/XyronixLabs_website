@@ -25,7 +25,19 @@ SECRET_KEY = 'django-insecure-uacn14jce0fb!qg+^v!!@wf=um#$lk4^5ghkr%*=d@mph=*8^b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Redirect HTTP to HTTPS
+SECURE_SSL_REDIRECT = not DEBUG
+
+# Ensure cookies are only sent over HTTPS
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+
+ALLOWED_HOSTS = ['xyronixlabs.com', 'www.xyronixlabs.com', 'localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://xyronixlabs.com', 
+                        'https://www.xyronixlabs.com', 
+                        'https://localhost', 
+                        'http://localhost:3000', 
+                        'http://192.168.1.7:3000']
 
 
 # Application definition
@@ -39,8 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
-    'channels',
+    #'channels',
     'api',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -76,16 +89,19 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://192.168.1.7:3000",
+    "https://xyronixlabs.com",
+    "https://www.xyronixlabs.com"
 ]
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
-    },
-}
+#CHANNEL_LAYERS = {
+#    'default': {
+#        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#        'CONFIG': {
+#            "hosts": [('127.0.0.1', 6379)],
+#        },
+#    },
+#}
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
