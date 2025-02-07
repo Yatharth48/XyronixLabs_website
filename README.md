@@ -60,15 +60,9 @@ This repository contains the source code for the XyronixLabs website, built with
     ```sh
     openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
     ```
-2. Run the Django development server with HTTPS:
+2. Run both the Django and React development servers:
     ```sh
-    python manage.py runserver_plus --cert-file cert.pem --key-file key.pem
-    ```
-
-## Frontend (React)
-1. Start the React development server:
-    ```sh
-    yarn start
+    python manage.py runservers
     ```
 
 ## Nginx Configuration
