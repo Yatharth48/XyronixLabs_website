@@ -2,14 +2,20 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   server: {
     https: {
       key: fs.readFileSync(path.resolve(__dirname, '../server/cert.key')),
       cert: fs.readFileSync(path.resolve(__dirname, '../server/cert.crt')),
-    },
+    },  
     proxy: {
       '/api': {
         target: 'https://localhost:8000',
