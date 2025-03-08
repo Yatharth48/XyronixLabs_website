@@ -20,11 +20,11 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed top-0 w-full z-50 border-b bg-black">
+    <header className="fixed top-0 w-full z-50 border-b bg-[#060e18]">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image src="/XyronixLabs_logo1.png" alt="Logo" width={32} height={32} className="w-8 h-8" />
-          <span className="font-bold text-xl font-serif tracking-widest ">Xyronix Labs</span>
+          <span className="font-bold text-xl font-inter tracking-widest ">Xyronix Labs</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
@@ -47,7 +47,7 @@ export default function Navbar() {
             Gallery
           </Link>
           <Button asChild variant="outline">
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/signin">Sign In</Link>
           </Button>
         </nav>
 
@@ -97,7 +97,7 @@ export default function Navbar() {
                 Gallery
               </Link>
               <Button asChild variant="outline" className="w-full" onClick={() => setIsOpen(false)}>
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/signin">Sign In</Link>
               </Button>
             </nav>
           </SheetContent>

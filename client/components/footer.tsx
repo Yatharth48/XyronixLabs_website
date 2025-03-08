@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 export default function Footer() {
   return (
-    <footer className="border-t bg-black">
+    <footer className="border-t bg-[#090c14]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -31,7 +31,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/jobs" className="text-sm text-gray-400 hover:text-white">
-                  Jobs
+                  Career
                 </Link>
               </li>
             </ul>
@@ -63,26 +63,20 @@ export default function Footer() {
             <ul className="space-y-2"> {/* Stacks items vertically */}
               <li>
                 <Link href="https://twitter.com/XyronixLabs" target="_blank" className="flex items-center text-sm text-gray-400 hover:text-white">
-                  <Image src="/twitter480.svg" alt="Twitter" width={24} height={24} className="mr-2" />
+                  <Image src="/twitter480.svg" alt="Twitter" width={28} height={28} className="mr-2" />
                 </Link>
               </li>
               <li>
                 <Link href="https://www.instagram.com/XyronixLabs" target="_blank" className="flex items-center text-sm text-gray-400 hover:text-white">
-                  <Image src="/instagram480.svg" alt="Instagram" width={24} height={24} className="mr-2" />
+                  <Image src="/instagram480.svg" alt="Instagram" width={28} height={28} className="mr-2" />
                 </Link>
               </li>
               <li>
                 <Link href="https://www.linkedin.com/company/xyronixlabs" target="_blank" className="flex items-center text-sm text-gray-400 hover:text-white">
-                  <Image src="/linkedin480.svg" alt="LinkedIn" width={24} height={24} className="mr-2" />
+                  <Image src="/linkedin480.svg" alt="LinkedIn" width={28} height={28} className="mr-2" />
                 </Link>
               </li>
             </ul>
-          </div>
-          <div className="space-y-4">
-            <h4 className="font-semibold">Get in Touch</h4>
-            <Button asChild className="w-full bg-purple-600 hover:bg-purple-700">
-              <Link href="/contact">Contact Us</Link>
-            </Button>
           </div>
         </div>
 

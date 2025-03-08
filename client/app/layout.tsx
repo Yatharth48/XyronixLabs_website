@@ -5,7 +5,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import ParticleBackground from "@/components/ui/particle-background"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,14 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-black text-white`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <div className="relative min-h-screen">
             
             <Navbar />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
             <main className="relative z-10">{children}</main>
+        </ThemeProvider>
             <Footer />
           </div>
-        </ThemeProvider>
       </body>
     </html>
   )
