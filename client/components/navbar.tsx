@@ -37,16 +37,13 @@ export default function Navbar() {
           <Link href="/services" className="text-sm hover:text-purple-400 transition-colors">
             Services
           </Link>
-          <Link href="/research" className="text-sm hover:text-purple-400 transition-colors">
-            Research
-          </Link>
-          <Link href="/jobs" className="text-sm hover:text-purple-400 transition-colors">
+          <Link href="/career" className="text-sm hover:text-purple-400 transition-colors">
             Career
           </Link>
           <Link href="/gallery" className="text-sm hover:text-purple-400 transition-colors">
             Gallery
           </Link>
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="bg-[#05101c]">
             <Link href="/signin">Sign In</Link>
           </Button>
         </nav>
@@ -81,13 +78,6 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Services
-              </Link>
-              <Link
-                href="/research"
-                className="text-lg hover:text-purple-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Research
               </Link>
               <Link
                 href="/gallery"
