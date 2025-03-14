@@ -1,98 +1,133 @@
-"use client"
-
-import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft, Github, Linkedin, Twitter } from "lucide-react"
 
-export default function AboutPage() {
+export default function FoundersPage() {
   return (
-    <div className="min-h-screen pt-24">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto text-center mb-16"
-        >
-          <h1 className="text-4xl font-bold mb-6">About Us</h1>
-          <p className="text-gray-400 text-lg">
-            Leading innovation in fire safety technology and research for a safer tomorrow.
-          </p>
-        </motion.div>
+    <div className="container mx-auto px-4 py-16 md:py-24 bg-[#011529] bg-gradient-to-b from-background to-secondary/20">
+      <div className="mb-12 ">
+        <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Meet Our Founders</h1>
+        <p className="mt-4 max-w-3xl text-xl text-muted-foreground">
+          The visionaries behind our company who are dedicated to innovation and excellence.
+        </p>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+      <div className="grid gap-12 md:gap-16 pl-8 pr-8">
+        {founders.map((founder, index) => (
+          <div
+            key={founder.id}
+            className={`grid gap-8 md:grid-cols-2 md:gap-12 items-center ${
+              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            }`}
           >
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-            <p className="text-gray-400 mb-4 text-justify">
-              Xyronix Labs is a forward-thinking technology company dedicated to innovation in AI, IoT, robotics, and data science. We aim to bridge the gap between cutting-edge technology and real-world applications, creating solutions that enhance lives and businesses. One of our flagship products, the Fire Early Warning and Detection System, ensures safety with advanced AI and IoT capabilities, offering early fire detection, precise localization, and efficient suppression.
-
-              Our scalable and reliable solutions cater to diverse industries, including residential, commercial, and industrial sectors. By leveraging intelligent systems powered by neural networks and robust cloud-based platforms, we strive to drive efficiency, safety, and sustainable growth. Guided by the vision of a smarter and safer tomorrow, we focus on creating impactful technologies that embody our motto, Future is Here.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="relative h-[300px]"
-          >
-            <Image src="/placeholder.svg" alt="Lab Research" fill className="object-cover rounded-lg" />
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-bold mb-12">Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 * index }}
-                className="bg-gray-900/50 p-6 rounded-lg"
-              >
-                <div className="relative w-32 h-32 mx-auto mb-4">
-                  <Image
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    fill
-                    className="object-cover rounded-full"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-purple-400 mb-2">{member.role}</p>
-                <p className="text-gray-400 text-sm">{member.description}</p>
-              </motion.div>
-            ))}
+            <div className={`${index % 2 === 1 ? "md:order-2" : ""}`}>
+              <div className="overflow-hidden rounded-xl bg-muted h-[80vh] w-[80vh] ">
+                <Image
+                  src={founder.image || "/placeholder.svg"}
+                  alt={founder.name}
+                  width={600}
+                  height={600}
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+            </div>
+            <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
+              <h2 className="text-3xl font-bold">{founder.name}</h2>
+              <p className="mt-2 text-xl font-medium text-primary">{founder.role}</p>
+              <div className="mt-6 space-y-4 text-muted-foreground text-justify pr-10">
+                {founder.bio.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+              <div className="mt-8 flex space-x-4">
+                {founder.social.linkedin && (
+                  <a
+                    href={founder.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label={`${founder.name}'s LinkedIn profile`}
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                )}
+                {founder.social.twitter && (
+                  <a
+                    href={founder.social.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label={`${founder.name}'s Twitter profile`}
+                  >
+                    <Twitter className="h-5 w-5" />
+                  </a>
+                )}
+                {founder.social.github && (
+                  <a
+                    href={founder.social.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-muted p-2 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label={`${founder.name}'s GitHub profile`}
+                  >
+                    <Github className="h-5 w-5" />
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
-        </motion.div>
+        ))}
       </div>
     </div>
   )
 }
 
-const team = [
+// Sample data - replace with your actual founders information
+const founders = [
   {
+    id: 1,
     name: "Aditya Seth",
-    role: "Founder & CEO",
+    role: "Founder & Chief Executive Officer",
     image: "/Aditya.jpg",
+    bio: [
+      "Aditya is a visionary leader with over 15 years of experience in the tech industry. She co-founded our company with a mission to revolutionize how businesses approach digital transformation.",
+      "Prior to founding our company, Aditya led product development at several Fortune 500 companies, where she honed her skills in strategic planning and innovation.",
+    ],
+    social: {
+      linkedin: "https://linkedin.com/in/adityaseth936",
+      twitter: "https://twitter.com",
+      github: "https://github.com/adityaseth0905",
+    },
   },
   {
+    id: 2,
     name: "Hemaang Mehra",
-    role: "Co-Founder & COO",
-    image: "/placeholder.svg",
+    role: "Co-Founder & Chief Operations Officer",
+    image: "/placeholder.svg?height=600&width=600",
+    bio: [
+      "Hemaang brings deep technical expertise and innovative thinking to our company. With a background in computer science and artificial intelligence, he leads our engineering team in developing cutting-edge solutions.",
+      "His passion for technology and problem-solving has been instrumental in building our platform from the ground up.",
+    ],
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+      github: null,
+    },
   },
   {
+    id: 3,
     name: "Dr. Sanjeev Seth",
-    role: "Senior Advisor",
-    image: "/placeholder.svg",
-  },
+    role: "Chief Advisor",
+    image: "/placeholder.svg?height=600&width=600",
+    bio: [
+      "Dr. Sanjeev brings deep technical expertise and innovative thinking to our company. With a background in computer science and artificial intelligence, he leads our engineering team in developing cutting-edge solutions.",
+      "His passion for technology and problem-solving has been instrumental in building our platform from the ground up.",
+    ],
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+      github: null,
+    },
+  }
 ]
 

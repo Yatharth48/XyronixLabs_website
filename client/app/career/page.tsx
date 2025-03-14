@@ -108,11 +108,11 @@ const jobs = [
     department: "Operations",
     location: "Remote",
     type: "Contract",
-    experience: "4+ years",
-    salary: "$110,000 - $160,000",
+    experience: "0-1 years",
+    salary: "Unpaid",
     description: "Help us build and maintain our cloud infrastructure. You'll be responsible for implementing and maintaining our CI/CD pipelines, cloud infrastructure, and monitoring systems.",
     requirements: [
-      "4+ years of DevOps experience",
+      "0-1 years of DevOps experience",
       "Strong knowledge of AWS or similar cloud platforms",
       "Experience with Docker and Kubernetes",
       "Expertise in CI/CD pipelines",
@@ -161,7 +161,7 @@ export default function JobsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20 pt-16 ">
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20 pt-16 bg-[#011529]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-12">

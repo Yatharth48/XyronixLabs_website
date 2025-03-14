@@ -20,11 +20,11 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed top-0 w-full z-50 border-b bg-[#060e18]">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <header className="fixed top-0 w-full z-50 border-b bg-[#0b121f]">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/XyronixLabs_logo1.png" alt="Logo" width={32} height={32} className="w-8 h-8" />
-          <span className="font-bold text-xl font-inter tracking-widest ">Xyronix Labs</span>
+          <Image src="/XyronixLabs_logo1.png" alt="Logo" width={28} height={28} className="w-8 h-8" />
+          <span className="text-2xl font-bold tracking-wide ">Xyronix Labs</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
@@ -43,7 +43,7 @@ export default function Navbar() {
           <Link href="/gallery" className="text-sm hover:text-purple-400 transition-colors">
             Gallery
           </Link>
-          <Button asChild variant="outline" className="bg-[#05101c]">
+          <Button asChild variant="outline" className="bg-[#9fef00] text-black">
             <Link href="/signin">Sign In</Link>
           </Button>
         </nav>
@@ -86,7 +86,7 @@ export default function Navbar() {
               >
                 Gallery
               </Link>
-              <Button asChild variant="outline" className="w-full" onClick={() => setIsOpen(false)}>
+              <Button asChild variant="outline" className="w-full bg-[#9fef00]" onClick={() => setIsOpen(false)}>
                 <Link href="/signin">Sign In</Link>
               </Button>
             </nav>
