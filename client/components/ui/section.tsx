@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Video from "next-video";
 
 interface SectionProps {
   title: string;
@@ -17,7 +16,7 @@ const Section: React.FC<SectionProps> = ({ title, content, media, reverse }) => 
   return (
     <div className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center mb-12 min-h-screen`}>
       {media && media.type === "image" && (
-        <div className="w-full md:w-1/2 h-80 relative min-h-screen">
+        <div className="w-full md:w-1/2 h-80 relative">
           <Image
             src={media.src}
             alt={media.alt || ""}
@@ -28,10 +27,10 @@ const Section: React.FC<SectionProps> = ({ title, content, media, reverse }) => 
         </div>
       )}
       {media && media.type === "video" && (
-        <div className="w-full md:w-1/2 h-80 relative min-h-screen">
-          <Video
+        <div className="w-full md:w-1/2 h-80 relative">
+          <video
             src={media.src}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-full h-full object-cover"
             autoPlay
             loop
             muted

@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   title: "Xyronix Labs",
   description: "Innovative solutions for a better future",
   icons: {
-    icon: "/XyronixLabs_logo1.png", // For browsers
-    apple: "/XyronixLabs_logo1.png", // For Apple devices
+    icon: "/Group8(1).png", // For browsers
+    apple: "/Group8(1).png", // For Apple devices
   },
 }
 

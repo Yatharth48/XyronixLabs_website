@@ -6,6 +6,14 @@ import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useState, useEffect } from "react"
+import { JetBrains_Mono } from "next/font/google";
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Use appropriate font weights
+  display: "swap",
+});
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,8 +31,8 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 border-b bg-[#0b121f]">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/XyronixLabs_logo1.png" alt="Logo" width={28} height={28} className="w-8 h-8" />
-          <span className="text-2xl font-bold tracking-wide ">Xyronix Labs</span>
+          <Image src="/Group10(2).png" alt="Logo" width={28} height={28} className="w-8 h-8" />
+          <span className="text-3xl font-bold tracking-tight ${jetBrainsMono.className}} ">Xyronix Labs</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">

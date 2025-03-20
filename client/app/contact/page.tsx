@@ -35,17 +35,12 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-2">Address</h3>
-                  <p className="text-gray-400">123 Innovation Drive</p>
-                  <p className="text-gray-400">Tech City, TC 12345</p>
-                </div>
-                <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <p className="text-gray-400">info@labcompany.com</p>
+                  <p className="text-gray-400">support@xyronixlabs.com</p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Phone</h3>
-                  <p className="text-gray-400">+1 (555) 123-4567</p>
+                  <p className="text-gray-400">+91 92203 42036</p>
                 </div>
               </CardContent>
             </Card>
@@ -56,7 +51,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Card className="bg-gray-900/50 border-gray-800">
+            <Card className="bg-gray-900/50 border-gray-800 mb-12">
               <CardHeader>
                 <CardTitle>Send us a message</CardTitle>
                 <CardDescription>Fill out the form below</CardDescription>

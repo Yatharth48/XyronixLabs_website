@@ -45,7 +45,7 @@ const jobs = [
     ],
     postedDate: "2024-03-20",
     company: "Xyronix Labs",
-    contactEmail: "jobs@xyronixlabs.com",
+    contactEmail: "hiring@xyronixlabs.com",
     hiringTeam: [
       {
         name: "Aditya Seth",
@@ -86,7 +86,7 @@ const jobs = [
     ],
     postedDate: "2024-03-19",
     company: "Xyronix Labs",
-    contactEmail: "jobs@xyronixlabs.com",
+    contactEmail: "hiring@xyronixlabs.com",
     hiringTeam: [
       {
         name: "Aditya Seth",
@@ -104,19 +104,17 @@ const jobs = [
   },
   {
     id: 3,
-    title: "DevOps Engineer",
-    department: "Operations",
+    title: "Frontend Intern",
+    department: "Web Development",
     location: "Remote",
     type: "Contract",
     experience: "0-1 years",
     salary: "Unpaid",
-    description: "Help us build and maintain our cloud infrastructure. You'll be responsible for implementing and maintaining our CI/CD pipelines, cloud infrastructure, and monitoring systems.",
+    description: "Help us build and maintain our website's UI. You'll be responsible for implementing and maintaining our frontend codebase and monitoring systems.",
     requirements: [
-      "0-1 years of DevOps experience",
-      "Strong knowledge of AWS or similar cloud platforms",
-      "Experience with Docker and Kubernetes",
-      "Expertise in CI/CD pipelines",
-      "Infrastructure as Code experience"
+      "0-1 years of Frontend development experience",
+      "Strong knowledge of Javasript, React.js, Next.js, and Tailwind CSS",
+      "Experience with version control systems (Git)",
     ],
     benefits: [
       "Competitive contract rates",
@@ -127,7 +125,7 @@ const jobs = [
     ],
     postedDate: "2024-03-18",
     company: "Xyronix Labs",
-    contactEmail: "jobs@xyronixlabs.com",
+    contactEmail: "hiring@xyronixlabs.com",
     hiringTeam: [
       {
         name: "Aditya Seth",
