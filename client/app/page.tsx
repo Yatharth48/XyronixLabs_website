@@ -77,7 +77,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center mt-4 gap-4">
             <Button asChild size="lg" className="bg-[#9fef00] text-black hover:bg-blue-700 hover:text-white">
-              <Link href="/newsletter">Subscribe to Newsletter</Link>
+              <Link href="">Subscribe to Newsletter</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
               <Link href="/contact">Contact Us</Link>
