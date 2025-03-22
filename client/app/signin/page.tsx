@@ -2,16 +2,13 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
-import AppTheme from '@mui/material/shared-theme/AppTheme';
-import ColorModeSelect from '@mui/material/shared-theme/ColorModeSelect';
 import SignInCard from './components/SignInCard';
 import Content from './components/Content';
 
 export default function SignInSide(props: { disableCustomTheme?: boolean }) {
   return (
-    <AppTheme {...props}>
-      <CssBaseline enableColorScheme />
-      <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
+    
+      
       <Stack
         direction="column"
         component="main"
@@ -63,6 +60,6 @@ export default function SignInSide(props: { disableCustomTheme?: boolean }) {
           </Stack>
         </Stack>
       </Stack>
-    </AppTheme>
+    
   );
 }
