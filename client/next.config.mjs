@@ -1,9 +1,9 @@
 let userConfig = undefined;
 
 try {
-  userConfig = await import('./next.config');
+  userConfig = await import('./next.config.mjs');
 } catch (e) {
-  console.warn("⚠️  Warning: Xyronix-Labs.config.js not found or has errors. Using default config.");
+  console.warn("⚠️  Warning: next.config.mjs not found or has errors. Using default config.");
 }
 
 /** @type {import('next').NextConfig} */
