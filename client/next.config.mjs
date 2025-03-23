@@ -1,7 +1,7 @@
 let userConfig = undefined;
 
 try {
-  userConfig = await import('./next.config.mjs');
+  userConfig = await import('./next.config');
 } catch (e) {
   console.warn("⚠️  Warning: next.config.mjs not found or has errors. Using default config.");
 }
