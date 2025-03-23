@@ -1,7 +1,7 @@
 let userConfig = undefined;
 
 try {
-  userConfig = await import('./Xyronix-Labs.config');
+  userConfig = await import('./xyronixlabs.config');
 } catch (e) {
   console.warn("⚠️  Warning: Xyronix-Labs.config.js not found or has errors. Using default config.");
 }
