@@ -59,13 +59,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="relative z-10 py-16 bg-[#0b121f] text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-            Our Research & Innovation
-          </h2>
-        </div>
-      </section>
+      
 
 
 
