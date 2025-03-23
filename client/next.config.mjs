@@ -1,8 +1,9 @@
-let userConfig = undefined
+let userConfig = undefined;
+
 try {
-  userConfig = await import('./Xyronix-Labs.config')
+  userConfig = await import('./Xyronix-Labs.config');
 } catch (e) {
-  // ignore error
+  console.warn("⚠️  Warning: Xyronix-Labs.config.js not found or has errors. Using default config.");
 }
 
 /** @type {import('next').NextConfig} */
@@ -21,28 +22,27 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-}
+};
 
-mergeConfig(nextConfig, userConfig)
-
+// ✅ Define mergeConfig function BEFORE calling it
 function mergeConfig(nextConfig, userConfig) {
   if (!userConfig) {
-    return
+    return;
   }
 
   for (const key in userConfig) {
-    if (
-      typeof nextConfig[key] === 'object' &&
-      !Array.isArray(nextConfig[key])
-    ) {
+    if (typeof nextConfig[key] === 'object' && !Array.isArray(nextConfig[key])) {
       nextConfig[key] = {
         ...nextConfig[key],
         ...userConfig[key],
-      }
+      };
     } else {
-      nextConfig[key] = userConfig[key]
+      nextConfig[key] = userConfig[key];
     }
   }
 }
 
-export default nextConfig
+// ✅ Call the function after defining it
+mergeConfig(nextConfig, userConfig);
+
+export default nextConfig;
