@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Video from "next-video"
 import Image from "next/image";
+import { StatsSection } from "@/components/stats-section"; 
+import { ImpactChart } from "@/components/impact-chart";
 
 export default function Home() {
   return (
@@ -22,8 +24,10 @@ export default function Home() {
       </video>
 
       {/* Overlay to improve readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lw"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lw">
 
+
+      </div>
       {/* Hero Section */}
       <section className="relative z-10 flex items-center justify-right min-h-screen text-Justify px-4">
         <div className="max-w-3xl bg-[#0b121f] bg-opacity-70 p-8 rounded-lg shadow-lg">
@@ -58,10 +62,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      
-      
 
-
+    <section className="relative pt-0 pb-0 z-10 py-12 bg-[#011529]"><div><StatsSection/></div></section>
+    <section className="relative w-full pl-0 pr-0 bg-[#011519] bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg p-6 pt-0"><ImpactChart/></section>
 
       <section className="relative z-10 py-12 bg-[#011529] text-center text-white">
         <div className="container mx-auto px-4">
