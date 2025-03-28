@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from "next/image"
 import Link from "next/link"
-import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent, useSpring, useInView } from "framer-motion"
+import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent, useSpring, useInView, m } from "framer-motion"
 import { GitlabIcon as GitHubIcon, LinkedinIcon as LinkedInIcon, TwitterIcon, MailIcon as EmailIcon, ChevronDown, Building2, Lightbulb, Target, Award, Moon, Sun, X, ArrowRight, ChevronUp, Rocket, Shield, Zap, Brain, Cpu, Cloud, Database, Server, Wifi, Microscope, Cog, Layers, BarChart3, Sparkles } from 'lucide-react'
 import { Tilt } from 'react-tilt'
 import CountUp from 'react-countup'
@@ -462,7 +462,7 @@ export default function AboutUsPage() {
       </section>
       
       {/* Research & Innovation Section */}
-      <section id="research" ref={sectionRefs.research} className={`py-20 ${darkMode ? 'bg-gray-950' : 'bg-gray-50'} transition-colors duration-300 relative overflow-hidden`}>
+      <section id="research" ref={sectionRefs.research} className={`py-20 ${darkMode ? 'bg-gray-950' : 'bg-gray-50'} transition-colors duration-300 relative overflow-hidden text-justify p-2`}>
         <div className="absolute inset-0 opacity-10">
           <AIBrainAnimation darkMode={darkMode} />
         </div>
@@ -975,16 +975,7 @@ export default function AboutUsPage() {
                       </div>
                     </div>
                     
-                    {selectedMember.achievements && (
-                      <div className={`mt-4 p-4 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
-                        <h4 className="font-semibold mb-2">Key Achievements</h4>
-                        <ul className="list-disc pl-5 space-y-1">
-                          {selectedMember.achievements.map((achievement, i) => (
-                            <li key={i} className="text-sm">{achievement}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    
                   </div>
                   
                   <div className="mt-6 flex space-x-3">
@@ -1476,21 +1467,16 @@ const founders = [
       linkedin: "https://linkedin.com/in/adityaseth936",
       twitter: null,
       github: "https://github.com/adityaseth0905",
-      mail: "mailto:aditya@xyronixlabs.com",
+      mail: "mailto:founder@xyronixlabs.com",
     },
     expertise: ["AI", "IoT", "Robotics", "Cloud Computing", "System Architecture"],
-    achievements: [
-      "Developed the award-winning Fire Early Warning System",
-      "Led the company to 200% growth in 3 years",
-      "Published 5 research papers on AI and IoT integration",
-      "Holds 3 patents in robotics technology"
-    ]
+    
   },
   {
     id: 2,
     name: "Hemaang Mehra",
     role: "Co-Founder & Chief Operations Officer",
-    image: "/placeholder.svg?height=600&width=600",
+    image: "/Hema.jpg",
     bio: [
       "Hemaang brings deep technical expertise and innovative thinking to our company. With a background in Electronics and Communication Engineering with specialization in artificial intelligence, he leads our company's operations.",
       "His passion for technology and problem-solving has been instrumental in building our platform from the ground up.",
@@ -1499,15 +1485,9 @@ const founders = [
       linkedin: "https://linkedin.com/in/hemaang-mehra",
       twitter: null,
       github: null,
-      mail: "mailto:hemaang@xyronixlabs.com",
+      mail: "mailto:co-founder@xyronixlabs.com",
     },
     expertise: ["Operations", "Electronics", "AI", "Product Development", "Team Leadership"],
-    achievements: [
-      "Streamlined operations resulting in 40% cost reduction",
-      "Led the development of our IoT sensor network",
-      "Established partnerships with 15+ industry leaders",
-      "Implemented agile methodologies across all departments"
-    ]
   },
 ]
 
@@ -1523,37 +1503,25 @@ const teamMembers = [
     social: {
       linkedin: "https://linkedin.com/in/adityaseth936",
       github: "https://github.com/adityaseth0905",
-      mail: "mailto:aditya@xyronixlabs.com",
+      mail: "mailto:founder@xyronixlabs.com",
     },
     expertise: ["AI", "IoT", "Robotics", "Cloud Computing", "System Architecture"],
-    achievements: [
-      "Developed the award-winning Fire Early Warning System",
-      "Led the company to 200% growth in 3 years",
-      "Published 5 research papers on AI and IoT integration",
-      "Holds 3 patents in robotics technology"
-    ]
   },
   {
     id: 2,
     name: "Hemaang Mehra",
     role: "Co-Founder & COO",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Hema.jpg",
     bio: [
       "Hemaang brings deep technical expertise and innovative thinking to our company with a background in Electronics and Communication Engineering specializing in artificial intelligence.",
     ],
     social: {
       linkedin: "https://linkedin.com/in/hemaang-mehra",
       github: null,
-      mail: "mailto:hemaang@xyronixlabs.com",
+      mail: "mailto:co-founder@xyronixlabs.com",
     },
     expertise: ["Operations", "Electronics", "AI", "Product Development", "Team Leadership"],
-    achievements: [
-      "Streamlined operations resulting in 40% cost reduction",
-      "Led the development of our IoT sensor network",
-      "Established partnerships with 15+ industry leaders",
-      "Implemented agile methodologies across all departments"
-    ]
-  },
+    },
   {
     id: 3,
     name: "Raghav Nanda",
@@ -1568,12 +1536,6 @@ const teamMembers = [
       mail: "mailto:raghav@xyronixlabs.com",
     },
     expertise: ["Machine Learning", "Neural Networks", "Computer Vision", "TensorFlow", "PyTorch"],
-    achievements: [
-      "Developed our proprietary object detection algorithm",
-      "Improved detection accuracy by 35%",
-      "Reduced false positives by 60%",
-      "Contributor to 2 open-source AI projects"
-    ]
   },
   {
     id: 4,
@@ -1589,13 +1551,7 @@ const teamMembers = [
       mail: "mailto:prerna@xyronixlabs.com",
     },
     expertise: ["IoT", "Sensor Networks", "Embedded Systems", "MQTT", "Low-Power Design"],
-    achievements: [
-      "Designed our low-power sensor network architecture",
-      "Reduced sensor power consumption by 45%",
-      "Implemented secure communication protocols",
-      "Developed custom firmware for specialized sensors"
-    ]
-  },
+    },
   {
     id: 5,
     name: "Drishti Arora",
@@ -1610,17 +1566,11 @@ const teamMembers = [
       mail: "mailto:drishti@xyronixlabs.com",
     },
     expertise: ["Robotics", "Mechanical Design", "ROS", "Control Systems", "Automation"],
-    achievements: [
-      "Designed our autonomous fire suppression robot",
-      "Improved robot navigation accuracy by 40%",
-      "Reduced robot deployment time by 50%",
-      "Holds a patent for robotic arm design"
-    ]
-  },
+    },
   {
     id: 6,
     name: "Saumya Omer",
-    role: "Data Scientist",
+    role: "Design Team Intern",
     image: "/placeholder.svg?height=400&width=400",
     bio: [
       "Saumya is a member of our Design Team initiatives with expertise in Graphic Designing and Social Media Campaign. He has developed several designs that power our Social Media Pressence.",
@@ -1631,13 +1581,7 @@ const teamMembers = [
       mail: "mailto:saumya@xyronixlabs.com",
     },
     expertise: ["Data Science", "Statistical Analysis", "Python", "R", "Big Data"],
-    achievements: [
-      "Built our predictive maintenance model",
-      "Developed customer behavior analytics platform",
-      "Reduced data processing time by 65%",
-      "Published research on anomaly detection algorithms"
-    ]
-  },
+    },
 ]
 
 const coreValues = [
@@ -1688,15 +1632,15 @@ const companyFeatures = [
 
 const stats = [
   { 
-    value: 50, 
+    value: 6, 
     label: "Team Members", 
-    suffix: "+",
+    suffix: "",
     icon: <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-purple-900/30">
       <Users className="h-6 w-6 text-purple-400" />
     </div>
   },
   { 
-    value: 100, 
+    value: 3, 
     label: "Projects Completed", 
     suffix: "+",
     icon: <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-cyan-900/30">
@@ -1704,9 +1648,9 @@ const stats = [
     </div>
   },
   { 
-    value: 25, 
-    label: "Countries Reached", 
-    suffix: "",
+    value: 8, 
+    label: "Working Domains", 
+    suffix: "+",
     icon: <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-blue-900/30">
       <Globe className="h-6 w-6 text-blue-400" />
     </div>
@@ -1723,34 +1667,40 @@ const stats = [
 
 const timeline = [
   {
-    year: "2018",
+    year: "2024",
+    month: "November",
     title: "Foundation",
-    description: "Xyronix Labs was founded with a vision to create innovative solutions in AI and IoT."
+    description: "Xyronix Labs was founded with a vision to create innovative solutions in Internet of Robotic Things (IoRT)."
   },
   {
-    year: "2019",
-    title: "First Product Launch",
-    description: "Launched our first AI-powered fire detection system, establishing our presence in the safety tech market."
+    year: "2024",
+    month: "December",
+    title: "Foundation of Founding Team",
+    description: "Xyronix Labs was founding team was established."
   },
   {
-    year: "2020",
-    title: "Expansion",
-    description: "Expanded our team and opened new offices to accommodate our growing operations and client base."
+    year: "2025",
+    month: "January",
+    title: "First Product Idea",
+    description: "Proposed our first AI-powered fire early detection and supression system, establishing our presence in the safety tech market."
   },
   {
-    year: "2021",
-    title: "Research Breakthrough",
-    description: "Achieved a significant breakthrough in our neural network algorithms, improving detection accuracy by 40%."
+    year: "2025",
+    month: "February",
+    title: "Networking",
+    description: "Networked with some organizations, Founders, CEOs and potential clientbase for recognition."
   },
   {
-    year: "2022",
-    title: "Global Reach",
-    description: "Extended our services to international markets, with implementations across Asia and Europe."
+    year: "2025",
+    month: "March",
+    title: "Hiring",
+    description: "Hired some Interns for Design Team & Social Media Handling."
   },
   {
-    year: "2023",
-    title: "Industry Recognition",
-    description: "Received multiple industry awards for innovation and excellence in AI and IoT solutions."
+    year: "2025",
+    month: "March",
+    title: "Contributions & Events",
+    description: "Made contributions and participated in AASGON & Business Press India Presents Indo-African Scholarships Launch Event."
   }
 ]
 
