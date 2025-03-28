@@ -8,6 +8,7 @@ import { GitlabIcon as GitHubIcon, LinkedinIcon as LinkedInIcon, TwitterIcon, Ma
 import { Tilt } from 'react-tilt'
 import CountUp from 'react-countup'
 import dynamic from 'next/dynamic'
+import { useMemo } from 'react';
 
 // Dynamically import the 3D model viewer to avoid SSR issues
 const ModelViewer = dynamic(() => import('@/components/model-viewerfor3'), { ssr: false })
@@ -193,28 +194,41 @@ export default function AboutUsPage() {
         
         {/* Animated background elements */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className={`absolute rounded-full ${darkMode ? "bg-purple-600" : "bg-purple-300"} opacity-20`}
-              style={{
+          {useMemo(() => {
+            const circles = [...Array(20)].map((_, i) => {
+              return {
                 width: Math.random() * 100 + 50,
                 height: Math.random() * 100 + 50,
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, Math.random() * 100 - 50],
-                x: [0, Math.random() * 100 - 50],
-              }}
-              transition={{
+                xAnim: [0, Math.random() * 100 - 50],
+                yAnim: [0, Math.random() * 100 - 50],
                 duration: Math.random() * 10 + 10,
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "reverse",
-                ease: "easeInOut",
-              }}
-            />
-          ))}
+              };
+            });
+            return circles.map((circle, i) => (
+              <motion.div
+                key={i}
+                className={`absolute rounded-full ${darkMode ? "bg-purple-600" : "bg-purple-300"} opacity-20`}
+                style={{
+                  width: circle.width,
+                  height: circle.height,
+                  left: circle.left,
+                  top: circle.top,
+                }}
+                animate={{
+                  x: circle.xAnim,
+                  y: circle.yAnim,
+                }}
+                transition={{
+                  duration: circle.duration,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+              />
+            ));
+          }, [darkMode])}
         </div>
 
         
@@ -1240,6 +1254,20 @@ function FutureVisionAnimation() {
 }
 
 function AIVisualizationAnimation() {
+  // Precompute the neural node properties once.
+  const neuralNodes = useMemo(() => {
+    return [...Array(30)].map(() => ({
+      width: Math.random() * 6 + 4,
+      height: Math.random() * 6 + 4,
+      left: Math.random() * 80 + 10, // percentage
+      top: Math.random() * 80 + 10,  // percentage
+      scaleAnim: [1, 1.2, 1],
+      opacityAnim: [0.4, 0.8, 0.4],
+      duration: Math.random() * 3 + 2,
+      delay: Math.random() * 2,
+    }));
+  }, []);
+
   return (
     <div className="w-full h-full bg-gradient-to-br from-purple-900/30 to-cyan-900/30 rounded-xl overflow-hidden flex items-center justify-center">
       <motion.div
@@ -1249,60 +1277,64 @@ function AIVisualizationAnimation() {
         className="relative w-full h-full"
       >
         {/* Neural network nodes */}
-        {[...Array(30)].map((_, i) => (
+        {neuralNodes.map((node, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-purple-500"
             style={{
-              width: Math.random() * 6 + 4,
-              height: Math.random() * 6 + 4,
-              left: `${Math.random() * 80 + 10}%`,
-              top: `${Math.random() * 80 + 10}%`,
+              width: node.width,
+              height: node.height,
+              left: `${node.left}%`,
+              top: `${node.top}%`,
             }}
             animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.4, 0.8, 0.4],
+              scale: node.scaleAnim,
+              opacity: node.opacityAnim,
             }}
             transition={{
               repeat: Infinity,
-              duration: Math.random() * 3 + 2,
-              delay: Math.random() * 2,
+              duration: node.duration,
+              delay: node.delay,
+              ease: "easeInOut",
             }}
           />
         ))}
-        
+
         {/* Neural network connections */}
         <svg className="absolute inset-0 w-full h-full">
-          {[...Array(40)].map((_, i) => {
-            const x1 = Math.random() * 100;
-            const y1 = Math.random() * 100;
-            const x2 = Math.random() * 100;
-            const y2 = Math.random() * 100;
-            
-            return (
-              <motion.line
-                key={i}
-                x1={`${x1}%`}
-                y1={`${y1}%`}
-                x2={`${x2}%`}
-                y2={`${y2}%`}
-                stroke="rgba(168, 85, 247, 0.2)"
-                strokeWidth="1"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ 
-                  pathLength: [0, 1],
-                  opacity: [0, 0.3, 0]
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: Math.random() * 4 + 3,
-                  delay: Math.random() * 2,
-                }}
-              />
-            );
-          })}
+          {useMemo(() => {
+            return [...Array(40)].map((_, i) => {
+              const x1 = Math.random() * 100;
+              const y1 = Math.random() * 100;
+              const x2 = Math.random() * 100;
+              const y2 = Math.random() * 100;
+              const duration = Math.random() * 4 + 3;
+              const delay = Math.random() * 2;
+              return (
+                <motion.line
+                  key={i}
+                  x1={`${x1}%`}
+                  y1={`${y1}%`}
+                  x2={`${x2}%`}
+                  y2={`${y2}%`}
+                  stroke="rgba(168, 85, 247, 0.2)"
+                  strokeWidth="1"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{
+                    pathLength: [0, 1],
+                    opacity: [0, 0.3, 0],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration,
+                    delay,
+                  }}
+                />
+              );
+            });
+          }, [])}
         </svg>
-        
+
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
           initial={{ opacity: 0 }}
@@ -1313,10 +1345,52 @@ function AIVisualizationAnimation() {
         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }
 
+
 function IoTNetworkAnimation() {
+  // Precompute IoT devices.
+  const iotDevices = useMemo(() => {
+    return [...Array(12)].map((_, i) => {
+      const icons = [
+        { icon: <Cpu className="h-6 w-6 text-cyan-400" />, key: "cpu" },
+        { icon: <Wifi className="h-6 w-6 text-cyan-400" />, key: "wifi" },
+        { icon: <Server className="h-6 w-6 text-cyan-400" />, key: "server" },
+        { icon: <Database className="h-6 w-6 text-cyan-400" />, key: "database" },
+        { icon: <Cloud className="h-6 w-6 text-cyan-400" />, key: "cloud" },
+      ];
+      const chosen = icons[i % icons.length];
+      return {
+        left: Math.random() * 80 + 10,
+        top: Math.random() * 80 + 10,
+        yAnim: [0, Math.random() * 10 - 5, 0],
+        duration: Math.random() * 3 + 3,
+        delay: Math.random() * 2,
+        icon: chosen.icon,
+      };
+    });
+  }, []);
+
+  // Precompute IoT connections.
+  const iotConnections = useMemo(() => {
+    return [...Array(20)].map((_, i) => {
+      const x1 = Math.random() * 100;
+      const y1 = Math.random() * 100;
+      const x2 = Math.random() * 100;
+      const y2 = Math.random() * 100;
+      return {
+        key: i,
+        x1: `${x1}%`,
+        y1: `${y1}%`,
+        x2: `${x2}%`,
+        y2: `${y2}%`,
+        duration: Math.random() * 4 + 3,
+        delay: Math.random() * 2,
+      };
+    });
+  }, []);
+
   return (
     <div className="w-full h-full bg-gradient-to-br from-cyan-900/30 to-blue-900/30 rounded-xl overflow-hidden flex items-center justify-center">
       <motion.div
@@ -1326,72 +1400,53 @@ function IoTNetworkAnimation() {
         className="relative w-full h-full"
       >
         {/* IoT devices */}
-        {[...Array(12)].map((_, i) => {
-          const icons = [
-            <Cpu key={1} className="h-6 w-6 text-cyan-400" />,
-            <Wifi key={2} className="h-6 w-6 text-cyan-400" />,
-            <Server key={3} className="h-6 w-6 text-cyan-400" />,
-            <Database key={4} className="h-6 w-6 text-cyan-400" />,
-            <Cloud key={5} className="h-6 w-6 text-cyan-400" />,
-          ];
-          
-          const icon = icons[i % icons.length];
-          
-          return (
-            <motion.div
-              key={i}
-              className="absolute rounded-lg bg-gray-800/80 p-2"
-              style={{
-                left: `${Math.random() * 80 + 10}%`,
-                top: `${Math.random() * 80 + 10}%`,
-              }}
+        {iotDevices.map((device, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-lg bg-gray-800/80 p-2"
+            style={{
+              left: `${device.left}%`,
+              top: `${device.top}%`,
+            }}
+            animate={{
+              y: device.yAnim,
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: device.duration,
+              delay: device.delay,
+            }}
+          >
+            {device.icon}
+          </motion.div>
+        ))}
+
+        {/* IoT connections */}
+        <svg className="absolute inset-0 w-full h-full">
+          {iotConnections.map((conn) => (
+            <motion.line
+              key={conn.key}
+              x1={conn.x1}
+              y1={conn.y1}
+              x2={conn.x2}
+              y2={conn.y2}
+              stroke="rgba(34, 211, 238, 0.2)"
+              strokeWidth="1"
+              strokeDasharray="5,5"
+              initial={{ pathLength: 0, opacity: 0 }}
               animate={{
-                y: [0, Math.random() * 10 - 5, 0],
+                pathLength: [0, 1],
+                opacity: [0, 0.4, 0],
               }}
               transition={{
                 repeat: Infinity,
-                duration: Math.random() * 3 + 3,
-                delay: Math.random() * 2,
+                duration: conn.duration,
+                delay: conn.delay,
               }}
-            >
-              {icon}
-            </motion.div>
-          );
-        })}
-        
-        {/* IoT connections */}
-        <svg className="absolute inset-0 w-full h-full">
-          {[...Array(20)].map((_, i) => {
-            const x1 = Math.random() * 100;
-            const y1 = Math.random() * 100;
-            const x2 = Math.random() * 100;
-            const y2 = Math.random() * 100;
-            
-            return (
-              <motion.line
-                key={i}
-                x1={`${x1}%`}
-                y1={`${y1}%`}
-                x2={`${x2}%`}
-                y2={`${y2}%`}
-                stroke="rgba(34, 211, 238, 0.2)"
-                strokeWidth="1"
-                strokeDasharray="5,5"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ 
-                  pathLength: [0, 1],
-                  opacity: [0, 0.4, 0]
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: Math.random() * 4 + 3,
-                  delay: Math.random() * 2,
-                }}
-              />
-            );
-          })}
+            />
+          ))}
         </svg>
-        
+
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
           initial={{ opacity: 0 }}
@@ -1402,7 +1457,7 @@ function IoTNetworkAnimation() {
         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }
 
 // Data
