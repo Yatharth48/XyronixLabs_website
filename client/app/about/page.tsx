@@ -1492,53 +1492,24 @@ const founders = [
 ]
 
 const teamMembers = [
+  
   {
     id: 1,
-    name: "Aditya Seth",
-    role: "Founder & CEO",
-    image: "/Aditya.jpg",
-    bio: [
-      "Aditya is a tech entrepreneur and innovator, specializing in AI, IoT, Robotics, and Networking. As the Founder & CEO of Xyronix Labs, he leads cutting-edge research and development in the Internet of Robotic Things (IoRT).",
-    ],
-    social: {
-      linkedin: "https://linkedin.com/in/adityaseth936",
-      github: "https://github.com/adityaseth0905",
-      mail: "mailto:founder@xyronixlabs.com",
-    },
-    expertise: ["AI", "IoT", "Robotics", "Cloud Computing", "System Architecture"],
-  },
-  {
-    id: 2,
-    name: "Hemaang Mehra",
-    role: "Co-Founder & COO",
-    image: "/Hema.jpg",
-    bio: [
-      "Hemaang brings deep technical expertise and innovative thinking to our company with a background in Electronics and Communication Engineering specializing in artificial intelligence.",
-    ],
-    social: {
-      linkedin: "https://linkedin.com/in/hemaang-mehra",
-      github: null,
-      mail: "mailto:co-founder@xyronixlabs.com",
-    },
-    expertise: ["Operations", "Electronics", "AI", "Product Development", "Team Leadership"],
-    },
-  {
-    id: 3,
     name: "Raghav Nanda",
     role: "Design Team Intern",
     image: "/placeholder.svg?height=400&width=400",
     bio: [
-      "Raghav is a member of our Design Team initiatives with expertise in Graphic Designing and Social Media Campaign. He has developed several designs that power our Social Media Pressence.",
+      "An aspiring graphic designer, specializes in Logo Design & Digital media. While pursuing b.com hons from MAC Delhi University, Known for my minimal approach & attention to detail, I consistently produce high quality visuals that align with objectives.",
     ],
     social: {
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://linkedin.com/in/raghav-nanda-026104248",
+      github: null,
       mail: "mailto:raghav@xyronixlabs.com",
     },
-    expertise: ["Machine Learning", "Neural Networks", "Computer Vision", "TensorFlow", "PyTorch"],
+    expertise: ["Graphic Designing", "Social Media Campaign"],
   },
   {
-    id: 4,
+    id: 2,
     name: "Prerna Ahuja",
     role: "Design Team Intern",
     image: "/placeholder.svg?height=400&width=400",
@@ -1553,34 +1524,34 @@ const teamMembers = [
     expertise: ["IoT", "Sensor Networks", "Embedded Systems", "MQTT", "Low-Power Design"],
     },
   {
-    id: 5,
+    id: 3,
     name: "Drishti Arora",
     role: "Design Team Intern",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Employees/Drishti_arora.jpg",
     bio: [
       "Drishti is a member of our Design Team initiatives with expertise in Graphic Designing and Social Media Campaign. He has developed several designs that power our Social Media Pressence.",
     ],
     social: {
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://linkedin.com/in/drishti-arora-b4a39b257",
+      github: null,
       mail: "mailto:drishti@xyronixlabs.com",
     },
-    expertise: ["Robotics", "Mechanical Design", "ROS", "Control Systems", "Automation"],
+    expertise: ["Robotics", "IoRT", "Research", "Automation"],
     },
   {
-    id: 6,
+    id: 4,
     name: "Saumya Omer",
     role: "Design Team Intern",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Employees/Saumya Omer.jpg",
     bio: [
-      "Saumya is a member of our Design Team initiatives with expertise in Graphic Designing and Social Media Campaign. He has developed several designs that power our Social Media Pressence.",
+      "Hello! I'm Saumya Omer, a passionate graphic designer with a keen eye for detail and a love for creativity. With 5 years of experience in the field, I specialize in branding, illustration, icons & logo design, poster, motion graphics, web design, etc.  I am an artist too. I create Indian folk art Mandala and lippon art.",
     ],
     social: {
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
+      linkedin: "https://linkedin.com/in/saumya-omer-550539310",
+      github: null,
       mail: "mailto:saumya@xyronixlabs.com",
     },
-    expertise: ["Data Science", "Statistical Analysis", "Python", "R", "Big Data"],
+    expertise: ["Branding", "Illustration", "Icons & Logo Design", "Motion Graphics"],
     },
 ]
 
