@@ -1497,7 +1497,7 @@ const teamMembers = [
     id: 1,
     name: "Raghav Nanda",
     role: "Design Team Intern",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/Employees/Raghav Nanda.jpg",
     bio: [
       "An aspiring graphic designer, specializes in Logo Design & Digital media. While pursuing b.com hons from MAC Delhi University, Known for my minimal approach & attention to detail, I consistently produce high quality visuals that align with objectives.",
     ],
