@@ -5,10 +5,17 @@ import Image from "next/image"
 import { useState } from "react";
 import { Card } from "@/components/ui/card"
 
-export default function GalleryPage() {
-  const [selectedItem, setSelectedItem] = useState(null);
+type GalleryItem = {
+  title: string | null;
+  description: string | null;
+  image?: string;
+  video?: string;
+};
 
-  const handleItemClick = (item) => {
+export default function GalleryPage() {
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+
+  const handleItemClick = (item: GalleryItem) => {
     setSelectedItem(item);
   };
 
