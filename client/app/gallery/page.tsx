@@ -157,7 +157,7 @@ export default function GalleryPage() {
   );
 }
 
-const galleryItems = [
+const galleryItems: GalleryItem[] = [
   
   {
     title: null,
