@@ -1492,9 +1492,23 @@ const founders = [
 ]
 
 const teamMembers = [
-  
   {
     id: 1,
+    name: "Darashveer Singh Dhillon",
+    role: "Research Analyst",
+    image: "/Employees/Darashveer Singh.jpg",
+    bio: [
+      "Darashveer is a member of our Research Team initiatives with expertise in Data Science, Machine Learning, and Data Analytics. He has developed several algorithms that power our AI and IoT solutions.",
+    ],
+    social: {
+      linkedin: "https://linkedin.com/in/darashveersinghdhillon",
+      github: null,
+      mail: "mailto:darashveer@xyronixlabs.com",
+    },
+    expertise: ["Research", "Data Analytics", "Data Science", "Machine Learning"],
+  },
+  {
+    id: 2,
     name: "Raghav Nanda",
     role: "Design Team Intern",
     image: "/Employees/Raghav Nanda.jpg",
@@ -1509,7 +1523,7 @@ const teamMembers = [
     expertise: ["Graphic Designing", "Social Media Campaign"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Prerna Ahuja",
     role: "Design Team Intern",
     image: "/placeholder.svg?height=400&width=400",
@@ -1524,7 +1538,7 @@ const teamMembers = [
     expertise: ["IoT", "Sensor Networks", "Embedded Systems", "MQTT", "Low-Power Design"],
     },
   {
-    id: 3,
+    id: 4,
     name: "Drishti Arora",
     role: "Design Team Intern",
     image: "/Employees/Drishti_arora.jpg",
@@ -1539,7 +1553,7 @@ const teamMembers = [
     expertise: ["Robotics", "IoRT", "Research", "Automation"],
     },
   {
-    id: 4,
+    id: 5,
     name: "Saumya Omer",
     role: "Design Team Intern",
     image: "/Employees/Saumya Omer.jpg",
