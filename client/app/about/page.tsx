@@ -1524,21 +1524,6 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Prerna Ahuja",
-    role: "Design Team Intern",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: [
-      "Prerna is a member of our Design Team initiatives with expertise in Graphic Designing and Social Media Campaign. He has developed several designs that power our Social Media Pressence.",
-    ],
-    social: {
-      linkedin: "https://linkedin.com",
-      github: "https://github.com",
-      mail: "mailto:prerna@xyronixlabs.com",
-    },
-    expertise: ["IoT", "Sensor Networks", "Embedded Systems", "MQTT", "Low-Power Design"],
-    },
-  {
-    id: 4,
     name: "Drishti Arora",
     role: "Design Team Intern",
     image: "/Employees/Drishti_arora.jpg",
@@ -1553,7 +1538,7 @@ const teamMembers = [
     expertise: ["Robotics", "IoRT", "Research", "Automation"],
     },
   {
-    id: 5,
+    id: 4,
     name: "Saumya Omer",
     role: "Design Team Intern",
     image: "/Employees/Saumya Omer.jpg",
