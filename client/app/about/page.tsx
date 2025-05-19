@@ -1629,7 +1629,7 @@ const teamMembers = [
     id: 10,
     name: "Dev Raj Santhaliya",
     role: "Design Team",
-    image: "/Employees/Devraj.heic",
+    image: "/Employees/Devraj.jpg",
     social: {
       linkedin: "https://linkedin.com/in/devrajsanthaliya",
       github: "https://github.com/okeidevv",
