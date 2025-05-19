@@ -1602,7 +1602,7 @@ const teamMembers = [
     id: 8,
     name: "Soumendra Narayan Roy",
     role: "Research Analyst",
-    image: "/Employees/Drishti_arora.jpg",
+    image: null,
     social: {
       linkedin: "https://linkedin.com/in/soumendra-narayan-roy-128135359",
       github: null,
