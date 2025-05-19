@@ -647,7 +647,7 @@ export default function AboutUsPage() {
           <WaveAnimation darkMode={darkMode} />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-12 relative z-10 text-justify">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -670,21 +670,21 @@ export default function AboutUsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`grid md:grid-cols-2 gap-10 items-center ${
+                className={`grid md:grid-cols-2 gap-2 items-center ${
                   index % 2 === 1 ? "md:flex-row-reverse" : ""
                 }`}
               >
                 <div className={`${index % 2 === 1 ? "md:order-2" : ""}`}>
                   <Tilt options={{ max: 15, scale: 1.03, speed: 400 }}>
-                    <div className={`overflow-hidden rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-gray-200'} aspect-square shadow-xl`}>
+                    <div className={`overflow-hidden rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-gray-200'} aspect-square shadow-xl w-56 md:w-96 mx-auto`}>
                       {founder.role.includes("Founder & CEO") ? (
-                        <Link href="https://www.founder.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://www.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
                           <div className="relative group">
                             <Image
-                              src={founder.image || "/placeholder.svg?height=600&width=600"}
+                              src={founder.image || "/placeholder.svg?height=300&width=300"}
                               alt={founder.name}
-                              width={600}
-                              height={600}
+                              width={400}
+                              height={400}
                               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -696,10 +696,10 @@ export default function AboutUsPage() {
                         </Link>
                       ) : (
                         <Image
-                          src={founder.image || "/placeholder.svg?height=600&width=600"}
+                          src={founder.image || "/placeholder.svg?height=300&width=300"}
                           alt={founder.name}
-                          width={600}
-                          height={600}
+                          width={400}
+                          height={400}
                           className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                         />
                       )}
@@ -708,7 +708,7 @@ export default function AboutUsPage() {
                 </div>
                 <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
                   {founder.role.includes("Founder & CEO") ? (
-                    <Link href="https://www.founder.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://www.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
                       <motion.h2 
                         className={`text-3xl font-bold hover:text-purple-400 transition-colors inline-flex items-center`}
                         whileHover={{ x: 5 }}
@@ -1056,7 +1056,7 @@ function TeamMemberCard({ member, index, isFounder, darkMode, onClick }: {
       <Tilt options={{ max: 15, scale: 1, speed: 300, glare: true, maxGlare: 0.5 }}>
         <div className="aspect-square overflow-hidden">
           {isFounder ? (
-            <Link href="https://www.founder.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
               {/* Prevents event bubbling */}
               <div onClick={(e) => e.stopPropagation()}>
                 <Image
@@ -1082,7 +1082,7 @@ function TeamMemberCard({ member, index, isFounder, darkMode, onClick }: {
 
       <div className="p-6">
         {isFounder ? (
-          <Link href="https://www.founder.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
             <h3 className="text-xl font-bold hover:text-purple-400 transition-colors flex items-center" onClick={(e) => e.stopPropagation()}>
               {member.name}
               <ArrowRight className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -1465,7 +1465,7 @@ const founders = [
     id: 1,
     name: "Aditya Seth",
     role: "Founder & Chief Executive Officer",
-    image: "/Aditya.jpg",
+    image: "/Employees/Me.jpg",
     bio: [
       "Aditya is a tech entrepreneur and innovator, specializing in AI, IoT, Robotics, and Networking. As the Founder & CEO of Xyronix Labs, he leads cutting-edge research and development in the Internet of Robotic Things (IoRT).",
       "He also serves as the Deputy CEO at Business Press India, COO at Shambhavi Techno Consultancy, and COO at Novatech Scientifics & Informatics. His leadership spans multiple industries, focusing on AI-driven automation, backend systems, and software engineering.",
@@ -1484,7 +1484,7 @@ const founders = [
     id: 2,
     name: "Hemaang Mehra",
     role: "Co-Founder & Chief Operations Officer",
-    image: "/Hema.jpg",
+    image: "/Employees/Hema.jpg",
     bio: [
       "Hemaang brings deep technical expertise and innovative thinking to our company. With a background in Electronics and Communication Engineering with specialization in artificial intelligence, he leads our company's operations.",
       "His passion for technology and problem-solving has been instrumental in building our platform from the ground up.",
@@ -1520,7 +1520,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Darashveer Singh Dhillon",
-    role: "",
+    role: "General Manager",
     image: "/Employees/Darashveer Singh.jpg",
     social: {
       linkedin: "https://linkedin.com/in/darashveersinghdhillon",
@@ -1534,7 +1534,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Priyanshu Chauhan",
-    role: "",
+    role: "General Manager",
     image: "/Employees/Priyanshu.jpg",
     social: {
       linkedin: "https://linkedin.com/in/priyanshu-chauhan-9ab9ac9",
@@ -1547,7 +1547,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Shubhankar Shukla",
-    role: "",
+    role: "General Manager",
     image: "/Employees/Shubhankar Shukla.jpg",
     social: {
       linkedin: "https://linkedin.com/in/shubhankar-shukla-b88a86336",
@@ -1560,7 +1560,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Devashish Biswas",
-    role: "",
+    role: "Team Lead -D1",
     image: "/Employees/Devashish.jpg",
     social: {
       linkedin: "https://linkedin.com/in/devashish-biswas-82b83a279",
@@ -1574,7 +1574,7 @@ const teamMembers = [
   {
     id: 5,
     name: "Yash Tomar",
-    role: "",
+    role: "Team Lead -C1",
     image: null,
     social: {
       linkedin: null,
@@ -1586,7 +1586,7 @@ const teamMembers = [
   {
     id: 6,
     name: "Pragya Jha",
-    role: "Data Science",
+    role: "D1 Team",
     image: "/Employees/Pragya Jha.jpg",
     social: {
       linkedin: "https://linkedin.com/in/pragya-jha-a6b328250",
@@ -1598,7 +1598,7 @@ const teamMembers = [
   {
     id: 7,
     name: "Yatharth Vashishth",
-    role: "Data Science",
+    role: "D1 Team",
     image: "/Employees/Yatharth Vashishth.jpg",
     social: {
       linkedin: "https://linkedin.com/in/yatharth-vashisht-1b3546310",
@@ -1612,7 +1612,7 @@ const teamMembers = [
   {
     id: 8,
     name: "Soumendra Narayan Roy",
-    role: "Research Analyst",
+    role: "Research Team",
     image: null,
     social: {
       linkedin: "https://linkedin.com/in/soumendra-narayan-roy-128135359",
@@ -1626,7 +1626,7 @@ const teamMembers = [
   {
     id: 9,
     name: "Shashank Kumar Lal",
-    role: "SDE Intern",
+    role: "D1 Team",
     image: null,
     social: {
       linkedin: "https://linkedin.com/in/shashank-kumar-lal-746b41364",
@@ -1665,7 +1665,7 @@ const teamMembers = [
   {
     id: 12,
     name: "Darsh Solanki",
-    role: "SDE Intern",
+    role: "D1 Team",
     image: "/Employees/Darsh.jpg",
     social: {
       linkedin: "https://linkedin.com/in/darsh-solanki-55a9b7222",
@@ -1679,7 +1679,7 @@ const teamMembers = [
   {
     id: 13,
     name: "Ayush Singh",
-    role: "Research Analyst",
+    role: "Research Team",
     image: "/Employees/Ayush.jpg",
     social: {
       linkedin: "https://linkedin.com/in/ayush-singh-a36969358",
@@ -1693,8 +1693,8 @@ const teamMembers = [
   {
     id: 14,
     name: "Ronit Jatasra",
-    role: "SDE Intern",
-    image: "/Employees/Ronit.jpg",
+    role: "D1 Team",
+    image: null,
     social: {
       linkedin: "https://linkedin.com/in/ronit-jatasra-120b4134a",
       github: "https://github.com/Ronit092",
@@ -1707,7 +1707,7 @@ const teamMembers = [
   {
     id: 15,
     name: "Ananya Das",
-    role: "Research Analyst Intern",
+    role: "Research Team",
     image: "/Employees/Ananya Das.jpg",
     social: {
       linkedin: "https://linkedin.com/in/ananya-das-185308308",
@@ -1721,7 +1721,7 @@ const teamMembers = [
   {
     id: 16,
     name: "Anshuman Prashar",
-    role: "SDE Intern",
+    role: "D1 Team",
     image: null,
     social: {
       linkedin: "https://linkedin.com/in/anshuman-parashar-8240b6254",
@@ -1748,7 +1748,7 @@ const teamMembers = [
   {
     id: 18,
     name: "Vansh Sethi",
-    role: "SDE Team",
+    role: "D1 Team",
     image: "/Employees/Vansh Sethi.jpg",
     social: {
       linkedin: "https://linkedin.com/in/vansh-sethi-b977a2276",
@@ -1761,7 +1761,7 @@ const teamMembers = [
   {
     id: 19,
     name: "Drishti Arora",
-    role: "Design Team Intern",
+    role: "Ex Research Team",
     image: "/Employees/Drishti_arora.jpg",
     social: {
       linkedin: "https://linkedin.com/in/drishti-arora-b4a39b257",
@@ -1774,7 +1774,7 @@ const teamMembers = [
   {
     id: 20,
     name: "Raghav Nanda",
-    role: "Ex Design Team Intern",
+    role: "Ex Design Team",
     image: "/Employees/Raghav Nanda.jpg",
     social: {
       linkedin: "https://linkedin.com/in/raghav-nanda-026104248",
@@ -1787,7 +1787,7 @@ const teamMembers = [
   {
     id: 21,
     name: "Saumya Omer",
-    role: "Ex Design Team Intern",
+    role: "Ex Design Team",
     image: "/Employees/Saumya Omer.jpg",
     social: {
       linkedin: "https://linkedin.com/in/saumya-omer-550539310",
