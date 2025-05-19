@@ -642,11 +642,14 @@ export default function AboutUsPage() {
       </section>
 
       {/* Founders Section */}
-      <section id="founders" ref={sectionRefs.founders} className={`py-20 ${darkMode ? 'bg-gray-950' : 'bg-gray-50'} transition-colors duration-300 relative overflow-hidden`}>
+      <section id="founders" ref={sectionRefs.founders} className={`py-20 ${darkMode ? 'bg-gray-950' : 'bg-gray-50'} transition-colors duration-300 relative overflow-hidden p-16 mb-6`}>
         <div className="absolute inset-0 opacity-10">
           <WaveAnimation darkMode={darkMode} />
         </div>
         
+          {/* Glass background overlay */}
+        <div className="absolute inset-0 z-0 bg-white/20 dark:bg-gray-900/30 backdrop-blur-lg rounded-3xl border border-white/30 dark:border-gray-700/40 mx-4 md:mx-12" />
+
         <div className="container mx-auto px-12 relative z-10 text-justify">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
