@@ -278,6 +278,15 @@ export default function AboutUsPage() {
                 className={`px-6 py-3 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} rounded-full font-medium transition-colors flex items-center space-x-2`}
                 onClick={() => scrollToSection('team')}
               >
+                <span>Meet Our Founders</span>
+                <ChevronDown className="h-4 w-4" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`px-6 py-3 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} rounded-full font-medium transition-colors flex items-center space-x-2`}
+                onClick={() => scrollToSection('founders')}
+              >
                 <span>Meet Our Team</span>
                 <ChevronDown className="h-4 w-4" />
               </motion.button>
@@ -632,40 +641,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" ref={sectionRefs.team} className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'} transition-colors duration-300 relative overflow-hidden`}>
-        
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
-            <p className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-700'} max-w-3xl mx-auto`}>
-              The brilliant minds behind Xyronix Labs who are dedicated to innovation and excellence.
-            </p>
-            <div className={`h-1 w-20 ${darkMode ? 'bg-purple-500' : 'bg-purple-600'} mx-auto mt-6`}></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard 
-                key={member.id} 
-                member={member} 
-                index={index}
-                isFounder={member.role.includes("Founder & CEO")}
-                darkMode={darkMode}
-                onClick={() => setSelectedMember(member)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Founders Section */}
       <section id="founders" ref={sectionRefs.founders} className={`py-20 ${darkMode ? 'bg-gray-950' : 'bg-gray-50'} transition-colors duration-300 relative overflow-hidden`}>
         <div className="absolute inset-0 opacity-10">
@@ -816,6 +791,42 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+      
+      {/* Team Section */}
+      <section id="team" ref={sectionRefs.team} className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'} transition-colors duration-300 relative overflow-hidden`}>
+        
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
+            <p className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-700'} max-w-3xl mx-auto`}>
+              The brilliant minds behind Xyronix Labs who are dedicated to innovation and excellence.
+            </p>
+            <div className={`h-1 w-20 ${darkMode ? 'bg-purple-500' : 'bg-purple-600'} mx-auto mt-6`}></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <TeamMemberCard 
+                key={member.id} 
+                member={member} 
+                index={index}
+                isFounder={member.role.includes("Founder & CEO")}
+                darkMode={darkMode}
+                onClick={() => setSelectedMember(member)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
 
       {/* Values Section */}
       <section id="values" ref={sectionRefs.values} className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'} transition-colors duration-300 relative overflow-hidden`}>
@@ -1564,7 +1575,7 @@ const teamMembers = [
     id: 5,
     name: "Yash Tomar",
     role: "",
-    image: "/Employees/",
+    image: null,
     social: {
       linkedin: null,
       github: null,
