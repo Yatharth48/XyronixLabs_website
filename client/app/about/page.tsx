@@ -1749,7 +1749,7 @@ const teamMembers = [
     id: 18,
     name: "Vansh Sethi",
     role: "SDE Team",
-    image: null,
+    image: "/Employees/Vansh Sethi.jpg",
     social: {
       linkedin: "https://linkedin.com/in/vansh-sethi-b977a2276",
       github: "https://www.github.com/vanshpb",
