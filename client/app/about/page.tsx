@@ -1630,7 +1630,7 @@ const teamMembers = [
     id: 9,
     name: "Shashank Kumar Lal",
     role: "D1 Team",
-    image: null,
+    image: "/Employees/Shashank.jpg",
     social: {
       linkedin: "https://linkedin.com/in/shashank-kumar-lal-746b41364",
       github: "https://github.com/Shashank-0910",
@@ -1725,7 +1725,7 @@ const teamMembers = [
     id: 16,
     name: "Anshuman Prashar",
     role: "D1 Team",
-    image: null,
+    image: "/Employees/Anshuman.jpg",
     social: {
       linkedin: "https://linkedin.com/in/anshuman-parashar-8240b6254",
       github: null,
