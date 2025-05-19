@@ -811,7 +811,7 @@ export default function AboutUsPage() {
             <div className={`h-1 w-20 ${darkMode ? 'bg-purple-500' : 'bg-purple-600'} mx-auto mt-6`}></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <TeamMemberCard 
                 key={member.id} 
@@ -1054,7 +1054,7 @@ function TeamMemberCard({ member, index, isFounder, darkMode, onClick }: {
       onClick={onClick}
     >
       <Tilt options={{ max: 15, scale: 1, speed: 300, glare: true, maxGlare: 0.5 }}>
-        <div className="aspect-square overflow-hidden">
+        <div className="aspect-square overflow-hidden w-40 md:w-64 mx-auto">
           {isFounder ? (
             <Link href="https://www.xyronixlabs.com" target="_blank" rel="noopener noreferrer">
               {/* Prevents event bubbling */}
@@ -1062,8 +1062,8 @@ function TeamMemberCard({ member, index, isFounder, darkMode, onClick }: {
                 <Image
                   src={member.image || "/placeholder.svg?height=400&width=400"}
                   alt={member.name}
-                  width={400}
-                  height={400}
+                  width={200}
+                  height={200}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
@@ -1072,8 +1072,8 @@ function TeamMemberCard({ member, index, isFounder, darkMode, onClick }: {
             <Image
               src={member.image || "/placeholder.svg?height=400&width=400"}
               alt={member.name}
-              width={400}
-              height={400}
+              width={200}
+              height={200}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
           )}
