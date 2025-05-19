@@ -1563,7 +1563,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Devashish Biswas",
-    role: "Team Lead -D1",
+    role: "Team Lead -Development Department (D1)",
     image: "/Employees/Devashish.jpg",
     social: {
       linkedin: "https://linkedin.com/in/devashish-biswas-82b83a279",
@@ -1577,7 +1577,7 @@ const teamMembers = [
   {
     id: 5,
     name: "Yash Tomar",
-    role: "Team Lead -C1",
+    role: "Team Lead -Content Department (C1)",
     image: null,
     social: {
       linkedin: null,
@@ -1616,7 +1616,7 @@ const teamMembers = [
     id: 8,
     name: "Soumendra Narayan Roy",
     role: "Research Team",
-    image: null,
+    image: "/Employees/Soumendra.jpg",
     social: {
       linkedin: "https://linkedin.com/in/soumendra-narayan-roy-128135359",
       github: null,
@@ -1642,7 +1642,7 @@ const teamMembers = [
   {
     id: 10,
     name: "Dev Raj Santhaliya",
-    role: "Design Team",
+    role: "Designining Team",
     image: "/Employees/Devraj.jpg",
     social: {
       linkedin: "https://linkedin.com/in/devrajsanthaliya",
@@ -1761,23 +1761,23 @@ const teamMembers = [
     expertise: ["SDE", "Research", "CSE"],
   },
   //put this in Ex Employees
-  {
-    id: 19,
-    name: "Drishti Arora",
-    role: "Ex Research Team",
-    image: "/Employees/Drishti_arora.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/drishti-arora-b4a39b257",
-      github: null,
-      mail: "mailto:drishti@xyronixlabs.com",
-    },
-    expertise: ["Robotics", "IoRT", "Research", "Automation"],
-  },
+  //{
+  //  id: 19,
+  //  name: "Drishti Arora",
+  //  role: "Ex Research Team",
+  //  image: "/Employees/Drishti_arora.jpg",
+  //  social: {
+  //    linkedin: "https://linkedin.com/in/drishti-arora-b4a39b257",
+  //    github: null,
+  //    mail: "mailto:drishti@xyronixlabs.com",
+  //  },
+  //  expertise: ["Robotics", "IoRT", "Research", "Automation"],
+  //},
   //Put this in Ex Employees
   {
     id: 20,
     name: "Raghav Nanda",
-    role: "Ex Design Team",
+    role: "Ex Designing Team",
     image: "/Employees/Raghav Nanda.jpg",
     social: {
       linkedin: "https://linkedin.com/in/raghav-nanda-026104248",
@@ -1787,18 +1787,18 @@ const teamMembers = [
     expertise: ["Graphic Designing", "Social Media Campaign"],
   },
   //Put this in Ex Employees
-  {
-    id: 21,
-    name: "Saumya Omer",
-    role: "Ex Design Team",
-    image: "/Employees/Saumya Omer.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/saumya-omer-550539310",
-      github: null,
-      mail: "mailto:saumya@xyronixlabs.com",
-    },
-    expertise: ["Branding", "Illustration", "Icons & Logo Design", "Motion Graphics"],
-    },
+  //{
+  //  id: 21,
+  //  name: "Saumya Omer",
+  //  role: "Ex Designing Team",
+  //  image: "/Employees/Saumya Omer.jpg",
+  //  social: {
+  //    linkedin: "https://linkedin.com/in/saumya-omer-550539310",
+  //    github: null,
+  //    mail: "mailto:saumya@xyronixlabs.com",
+  //  },
+  //  expertise: ["Branding", "Illustration", "Icons & Logo Design", "Motion Graphics"],
+  //  },
 ]
 
 const coreValues = [
