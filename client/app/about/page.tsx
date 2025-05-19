@@ -276,7 +276,7 @@ export default function AboutUsPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} rounded-full font-medium transition-colors flex items-center space-x-2`}
-                onClick={() => scrollToSection('team')}
+                onClick={() => scrollToSection('founders')}
               >
                 <span>Meet Our Founders</span>
                 <ChevronDown className="h-4 w-4" />
@@ -285,7 +285,7 @@ export default function AboutUsPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} rounded-full font-medium transition-colors flex items-center space-x-2`}
-                onClick={() => scrollToSection('founders')}
+                onClick={() => scrollToSection('team')}
               >
                 <span>Meet Our Team</span>
                 <ChevronDown className="h-4 w-4" />
