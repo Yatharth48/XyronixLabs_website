@@ -950,9 +950,7 @@ export default function AboutUsPage() {
                   <p className={`${darkMode ? 'text-purple-400' : 'text-purple-600'} text-lg mb-4`}>{selectedMember.role}</p>
                   
                   <div className={`flex-grow overflow-y-auto ${darkMode ? 'text-gray-300' : 'text-gray-700'} space-y-4 pr-2`}>
-                    {selectedMember.bio.map((paragraph, i) => (
-                      <p key={i}>{paragraph}</p>
-                    ))}
+                    
                     
                     <div className={`mt-6 p-4 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
                       <h4 className="font-semibold mb-2">Expertise</h4>
@@ -1094,7 +1092,6 @@ function TeamMemberCard({ member, index, isFounder, darkMode, onClick }: {
       >
         <h3 className="text-xl font-bold text-white">{member.name}</h3>
         <p className="text-purple-400 mb-2">{member.role}</p>
-        <p className="text-gray-300 mb-4 line-clamp-3">{member.bio[0]}</p>
         
         <div className="flex space-x-3">
           {member.social.linkedin && (
@@ -1489,17 +1486,31 @@ const founders = [
     },
     expertise: ["Operations", "Electronics", "AI", "Product Development", "Team Leadership"],
   },
+  {
+    id: 3,
+    name: "Dr. Sanjeev Seth",
+    role: "Chief Advisor",
+    image: "/Employees/sanjeev seth.jpg",
+    bio: [
+      "Dr. Sanjeev Seth is a seasoned professional with over 30 years of experience in diverse industries & has served  Pharmaceutical, Health Care, Hospitality, Real Estate & Academic Industry in various capacities from R & D, Brand Promotion, Quality Analyst & Freelance Auditor for Industry & Academia.",
+    ],
+    social: {
+      linkedin: "https://linkedin.com/in/sanjeevseth",
+      twitter: null,
+      github: null,
+      mail: "mailto:sanjeev@xyronixlabs.com",
+    },
+    expertise: ["Advising", "Consultancy", "NAAC", "NABL", "QS", "JCC", "ISO", "Audits", "NABH", "NIRF"],
+  },
 ]
 
 const teamMembers = [
+  //update this pls
   {
     id: 1,
     name: "Darashveer Singh Dhillon",
-    role: "Research Analyst",
+    role: "",
     image: "/Employees/Darashveer Singh.jpg",
-    bio: [
-      "Darashveer is a member of our Research Team initiatives with expertise in Data Science, Machine Learning, and Data Analytics. He has developed several algorithms that power our AI and IoT solutions.",
-    ],
     social: {
       linkedin: "https://linkedin.com/in/darashveersinghdhillon",
       github: null,
@@ -1507,14 +1518,253 @@ const teamMembers = [
     },
     expertise: ["Research", "Data Analytics", "Data Science", "Machine Learning"],
   },
+  //update this pls
+  //make email
   {
     id: 2,
-    name: "Raghav Nanda",
+    name: "Priyanshu Chauhan",
+    role: "",
+    image: "/Employees/Priyanshu.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/priyanshu-chauhan-9ab9ac9",
+      github: "https://github.com/Anshuchauahan",
+      mail: "mailto:priyanshu@xyronixlabs.com",
+    },
+    expertise: ["SDE", "Research", "CSE", "Automation", "Cyber Security"],
+  },
+  //update this pls
+  {
+    id: 3,
+    name: "Shubhankar Shukla",
+    role: "",
+    image: "/Employees/Shubhankar Shukla.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/shubhankar-shukla-b88a86336",
+      github: "https://www.github.com/Shubhankar003",
+      mail: "mailto:shubhankar@xyronixlabs.com",
+    },
+    expertise: ["Robotics", "ECE", "Research", "Automation"],
+  },
+  //update this pls
+  {
+    id: 4,
+    name: "Devashish Biswas",
+    role: "",
+    image: "/Employees/Devashish.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/devashish-biswas-82b83a279",
+      github: "https://www.github.com/dbiswas2004",
+      mail: "mailto:devashish@xyronixlabs.com",
+    },
+    expertise: ["Robotics", "SDE", "Research", "CSE"],
+  },
+  //update this pls
+  //make email
+  {
+    id: 5,
+    name: "Yash Tomar",
+    role: "",
+    image: "/Employees/",
+    social: {
+      linkedin: null,
+      github: null,
+      mail: "mailto:yash@xyronixlabs.com",
+    },
+    expertise: ["Robotics", "SDE", "Research", "CSE"],
+  },
+  {
+    id: 6,
+    name: "Pragya Jha",
+    role: "Data Science",
+    image: "/Employees/Pragya Jha.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/pragya-jha-a6b328250",
+      github: "https://www.github.com/Pragya3104",
+      mail: "mailto:pragya@xyronixlabs.com",
+    },
+    expertise: ["Python", "Data Science", "Backend", "Research", "Automation"],
+  },
+  {
+    id: 7,
+    name: "Yatharth Vashishth",
+    role: "Data Science",
+    image: "/Employees/Yatharth Vashishth.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/yatharth-vashisht-1b3546310",
+      github: "https://www.github.com/Yatharth48",
+      mail: "mailto:yatharth@xyronixlabs.com",
+    },
+    expertise: ["Python", "Data Science", "Backend", "Research", "Automation"],
+  },
+  //update this pls
+  //make email  
+  {
+    id: 8,
+    name: "Soumendra Narayan Roy",
+    role: "Research Analyst",
+    image: "/Employees/Drishti_arora.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/soumendra-narayan-roy-128135359",
+      github: null,
+      mail: "mailto:soumendra@xyronixlabs.com",
+    },
+    expertise: ["Robotics", "ECE", "Research", "Automation"],
+  },
+  //update this pls
+  //make email
+  {
+    id: 9,
+    name: "Shashank Kumar Lal",
+    role: "SDE Intern",
+    image: null,
+    social: {
+      linkedin: "https://linkedin.com/in/shashank-kumar-lal-746b41364",
+      github: "https://github.com/Shashank-0910",
+      mail: "mailto:shashank@xyronixlabs.com",
+    },
+    expertise: ["SDE", "Research", "CSE", "Automation"],
+  },
+  //make email
+  {
+    id: 10,
+    name: "Dev Raj Santhaliya",
+    role: "Design Team",
+    image: "/Employees/Devraj.heic",
+    social: {
+      linkedin: "https://linkedin.com/in/devrajsanthaliya",
+      github: "https://github.com/okeidevv",
+      mail: "mailto:devraj@xyronixlabs.com",
+    },
+    expertise: ["SDE", "Research", "CSE", "Automation"],
+  },
+  //make email
+  {
+    id: 11,
+    name: "Sankalp Tiwari",
+    role: "Content Writer",
+    image: "/Employees/Sankalp.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/sankalp-tiwari-414791358",
+      github: null,
+      mail: "mailto:sankalp@xyronixlabs.com",
+    },
+    expertise: ["Content Writting", "Content Creation", "ECE"],
+  },
+  //make email
+  {
+    id: 12,
+    name: "Darsh Solanki",
+    role: "SDE Intern",
+    image: "/Employees/Darsh.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/darsh-solanki-55a9b7222",
+      github: "https://github.com/darsh0124",
+      mail: "mailto:darsh@xyronixlabs.com",
+    },
+    expertise: ["SDE", "Research", "CSE"],
+  },
+  //update this pls
+  //make email
+  {
+    id: 13,
+    name: "Ayush Singh",
+    role: "Research Analyst",
+    image: "/Employees/Ayush.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/ayush-singh-a36969358",
+      github: "https://github.com/Ayushsingh0053",
+      mail: "mailto:ayush@xyronixlabs.com",
+    },
+    expertise: ["EEE", "Research", "Automation"],
+  },
+  //update this pls
+  //make email
+  {
+    id: 14,
+    name: "Ronit Jatasra",
+    role: "SDE Intern",
+    image: "/Employees/Ronit.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/ronit-jatasra-120b4134a",
+      github: "https://github.com/Ronit092",
+      mail: "mailto:ronit@xyronixlabs.com",
+    },
+    expertise: ["SDE", "Research", "CSE"],
+  },
+  //update this pls
+  //make email
+  {
+    id: 15,
+    name: "Ananya Das",
+    role: "Research Analyst Intern",
+    image: "/Employees/Ananya Das.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/ananya-das-185308308",
+      github: null,
+      mail: "mailto:ananya@xyronixlabs.com",
+    },
+    expertise: ["Research", "Data Analytics", "Data Science", "Machine Learning"],
+  },
+  //update this pls
+  //make email
+  {
+    id: 16,
+    name: "Anshuman Prashar",
+    role: "SDE Intern",
+    image: null,
+    social: {
+      linkedin: "https://linkedin.com/in/anshuman-parashar-8240b6254",
+      github: null,
+      mail: "mailto:anshuman@xyronixlabs.com",
+    },
+    expertise: ["Robotics", "SDE", "Research", "CSE"],
+  },
+  //make email
+  {
+    id: 17,
+    name: "K SABARI KUMAR",
+    role: "Research Team",
+    image: "/Employees/Sabari.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/sabari-kumar-601791358/",
+      github: "https://www.github.com/Sabari569",
+      mail: "mailto:sabari@xyronixlabs.com",
+    },
+    expertise: ["Robotics", "ECE", "Research"],
+  },
+  //update this pls
+  //make email
+  {
+    id: 18,
+    name: "Vansh Sethi",
+    role: "SDE Team",
+    image: null,
+    social: {
+      linkedin: "https://linkedin.com/in/vansh-sethi-b977a2276",
+      github: "https://www.github.com/vanshpb",
+      mail: "mailto:vansh@xyronixlabs.com",
+    },
+    expertise: ["SDE", "Research", "CSE"],
+  },
+  //put this in Ex Employees
+  {
+    id: 19,
+    name: "Drishti Arora",
     role: "Design Team Intern",
+    image: "/Employees/Drishti_arora.jpg",
+    social: {
+      linkedin: "https://linkedin.com/in/drishti-arora-b4a39b257",
+      github: null,
+      mail: "mailto:drishti@xyronixlabs.com",
+    },
+    expertise: ["Robotics", "IoRT", "Research", "Automation"],
+  },
+  //Put this in Ex Employees
+  {
+    id: 20,
+    name: "Raghav Nanda",
+    role: "Ex Design Team Intern",
     image: "/Employees/Raghav Nanda.jpg",
-    bio: [
-      "An aspiring graphic designer, specializes in Logo Design & Digital media. While pursuing b.com hons from MAC Delhi University, Known for my minimal approach & attention to detail, I consistently produce high quality visuals that align with objectives.",
-    ],
     social: {
       linkedin: "https://linkedin.com/in/raghav-nanda-026104248",
       github: null,
@@ -1522,29 +1772,12 @@ const teamMembers = [
     },
     expertise: ["Graphic Designing", "Social Media Campaign"],
   },
+  //Put this in Ex Employees
   {
-    id: 3,
-    name: "Drishti Arora",
-    role: "Design Team Intern",
-    image: "/Employees/Drishti_arora.jpg",
-    bio: [
-      "Drishti is a member of our Design Team initiatives with expertise in Graphic Designing and Social Media Campaign. He has developed several designs that power our Social Media Pressence.",
-    ],
-    social: {
-      linkedin: "https://linkedin.com/in/drishti-arora-b4a39b257",
-      github: null,
-      mail: "mailto:drishti@xyronixlabs.com",
-    },
-    expertise: ["Robotics", "IoRT", "Research", "Automation"],
-    },
-  {
-    id: 4,
+    id: 21,
     name: "Saumya Omer",
-    role: "Design Team Intern",
+    role: "Ex Design Team Intern",
     image: "/Employees/Saumya Omer.jpg",
-    bio: [
-      "Hello! I'm Saumya Omer, a passionate graphic designer with a keen eye for detail and a love for creativity. With 5 years of experience in the field, I specialize in branding, illustration, icons & logo design, poster, motion graphics, web design, etc.  I am an artist too. I create Indian folk art Mandala and lippon art.",
-    ],
     social: {
       linkedin: "https://linkedin.com/in/saumya-omer-550539310",
       github: null,
