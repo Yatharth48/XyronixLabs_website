@@ -1578,7 +1578,7 @@ const teamMembers = [
     id: 5,
     name: "Yash Tomar",
     role: "Team Lead -Content Department (C1)",
-    image: null,
+    image: "/Employees/Yash.jpg",
     social: {
       linkedin: "https://www.linkedin.com/in/yash-te-e/",
       github: null,
