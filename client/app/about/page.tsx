@@ -1580,7 +1580,7 @@ const teamMembers = [
     role: "Team Lead -Content Department (C1)",
     image: null,
     social: {
-      linkedin: null,
+      linkedin: "https://www.linkedin.com/in/yash-te-e/",
       github: null,
       mail: "mailto:yash@xyronixlabs.com",
     },
@@ -1697,7 +1697,7 @@ const teamMembers = [
     id: 14,
     name: "Ronit Jatasra",
     role: "D1 Team",
-    image: null,
+    image: "/Employees/Ronit.jpg",
     social: {
       linkedin: "https://linkedin.com/in/ronit-jatasra-120b4134a",
       github: "https://github.com/Ronit092",
@@ -1777,7 +1777,7 @@ const teamMembers = [
   {
     id: 20,
     name: "Raghav Nanda",
-    role: "Ex Designing Team",
+    role: "Designing Team",
     image: "/Employees/Raghav Nanda.jpg",
     social: {
       linkedin: "https://linkedin.com/in/raghav-nanda-026104248",
