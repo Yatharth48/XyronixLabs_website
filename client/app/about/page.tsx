@@ -1293,20 +1293,6 @@ export default function AboutUsPage() {
               >
                 <X className="h-5 w-5" />
               </button>
-
-              <div className="grid md:grid-cols-2">
-                <div className="aspect-square">
-                  <Image
-                    src={
-                      selectedMember.image ||
-                      "/placeholder.svg?height=600&width=600"
-                    }
-                    alt={selectedMember.name}
-                    width={600}
-                    height={600}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
                 <div className="p-6 md:p-8 flex flex-col">
                   <h3 className="text-2xl font-bold">{selectedMember.name}</h3>
                   <p
@@ -1403,7 +1389,6 @@ export default function AboutUsPage() {
                     )}
                   </div>
                 </div>
-              </div>
             </motion.div>
           </motion.div>
         )}
@@ -1434,57 +1419,22 @@ function TeamMemberCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className={`relative overflow-hidden rounded-xl ${darkMode ? "bg-gray-800/80" : "bg-white/80"
-        } group shadow-lg cursor-pointer backdrop-blur-sm border ${darkMode ? "border-gray-700/50" : "border-gray-200/50"
-        }`}
+      className={`relative overflow-hidden rounded-xl w-full h-40 p-4 flex flex-col justify-center items-center text-center
+        ${darkMode ? "bg-gray-800/80 border-gray-700/50" : "bg-white/80 border-gray-200/50"}
+        group shadow-lg cursor-pointer backdrop-blur-sm border`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
-      <Tilt
-        options={{ max: 15, scale: 1, speed: 300, glare: true, maxGlare: 0.5 }}
-      >
-        <div className="aspect-square overflow-hidden w-40 md:w-64 mx-auto">
-          {isFounder ? (
-            <Link
-              href="https://www.xyronixlabs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {/* Prevents event bubbling */}
-              <div onClick={(e) => e.stopPropagation()}>
-                {/* <Image
-                  src={member.image || "/placeholder.svg?height=400&width=400"}
-                  alt={member.name}
-                  width={200}
-                  height={200}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                /> */}
-              </div>
-            </Link>
-          ) : (
-            <Image
-              src={member.image || "/placeholder.svg?height=400&width=400"}
-              alt={member.name}
-              width={200}
-              height={200}
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-          )}
-        </div>
-      </Tilt>
-
-      <div className="p-6">
+      <div className="z-10">
         {isFounder ? (
           <Link
             href="https://www.xyronixlabs.com"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
-            <h3
-              className="text-xl font-bold hover:text-purple-400 transition-colors flex items-center"
-              onClick={(e) => e.stopPropagation()}
-            >
+            <h3 className="text-xl font-bold hover:text-purple-400 transition-colors flex items-center justify-center">
               {member.name}
               <ArrowRight className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
             </h3>
@@ -1492,21 +1442,19 @@ function TeamMemberCard({
         ) : (
           <h3 className="text-xl font-bold">{member.name}</h3>
         )}
-        <p
-          className={`${darkMode ? "text-purple-400" : "text-purple-600"} mt-1`}
-        >
+        <p className={`${darkMode ? "text-purple-400" : "text-purple-600"} mt-1`}>
           {member.role}
         </p>
       </div>
 
-      {/* Hover Details */}
+      {/* Hover Overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent p-6 flex flex-col justify-end"
+        className="absolute inset-0 bg-black/90 p-4 flex flex-col justify-end items-center z-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <h3 className="text-xl font-bold text-white">{member.name}</h3>
+        {/* <h3 className="text-xl font-bold text-white">{member.name}</h3> */}
         <p className="text-purple-400 mb-2">{member.role}</p>
 
         <div className="flex space-x-3">
@@ -1559,6 +1507,7 @@ function TeamMemberCard({
     </motion.div>
   );
 }
+
 
 // Animation Components
 function RocketLaunchAnimation() {
