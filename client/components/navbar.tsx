@@ -39,9 +39,6 @@ export default function Navbar() {
           <Link href="/about" className="text-sm hover:text-purple-400 transition-colors">
             About
           </Link>
-          <Link href="/products" className="text-sm hover:text-purple-400 transition-colors">
-            Products
-          </Link>
           <Link href="/services" className="text-sm hover:text-purple-400 transition-colors">
             Services
           </Link>
@@ -72,13 +69,6 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 About
-              </Link>
-              <Link
-                href="/products"
-                className="text-lg hover:text-purple-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Products
               </Link>
               <Link
                 href="/services"

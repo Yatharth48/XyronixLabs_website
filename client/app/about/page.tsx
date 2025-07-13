@@ -2082,22 +2082,22 @@ const teamMembers = [
   },
   //update this pls
   //make email
-  {
-    id: 14,
-    name: "Ronit Jatasra",
-    role: "D1 Team",
-    image: "",
-    social: {
-      linkedin: "https://linkedin.com/in/ronit-jatasra-120b4134a",
-      github: "https://github.com/Ronit092",
-      mail: "mailto:ronit@xyronixlabs.com",
-    },
-    expertise: ["SDE", "Research", "CSE"],
-  },
+  //{
+  //  id: 14,
+  //  name: "Ronit Jatasra",
+  //  role: "D1 Team",
+  //  image: "",
+  //  social: {
+  //    linkedin: "https://linkedin.com/in/ronit-jatasra-120b4134a",
+  //    github: "https://github.com/Ronit092",
+  //    mail: "mailto:ronit@xyronixlabs.com",
+  //  },
+  //  expertise: ["SDE", "Research", "CSE"],
+  //},
   //update this pls
   //make email
   {
-    id: 15,
+    id: 14,
     name: "Ananya Das",
     role: "Research Team",
     image: "",
@@ -2115,21 +2115,21 @@ const teamMembers = [
   },
   //update this pls
   //make email
-  {
-    id: 16,
-    name: "Anshuman Prashar",
-    role: "D1 Team",
-    image: "",
-    social: {
-      linkedin: "https://linkedin.com/in/anshuman-parashar-8240b6254",
-      github: null,
-      mail: "mailto:anshuman@xyronixlabs.com",
-    },
-    expertise: ["Robotics", "SDE", "Research", "CSE"],
-  },
+  //{
+  //  id: 16,
+  //  name: "Anshuman Prashar",
+  //  role: "D1 Team",
+  //  image: "",
+  //  social: {
+  //    linkedin: "https://linkedin.com/in/anshuman-parashar-8240b6254",
+  //    github: null,
+  //    mail: "mailto:anshuman@xyronixlabs.com",
+  //  },
+  //  expertise: ["Robotics", "SDE", "Research", "CSE"],
+  //},
   //make email
   {
-    id: 17,
+    id: 15,
     name: "K SABARI KUMAR",
     role: "Research Team",
     image: "",
@@ -2143,7 +2143,7 @@ const teamMembers = [
   //update this pls
   //make email
   {
-    id: 18,
+    id: 16,
     name: "Vansh Sethi",
     role: "D1 Team",
     image: "",
