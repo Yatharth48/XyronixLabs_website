@@ -14,9 +14,17 @@ type GalleryItem = {
 
 export default function GalleryPage() {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+  const [isGsuaImage, setIsGsuaImage] = useState(false); // Track if selected is from GSUA
 
-  const handleItemClick = (item: GalleryItem) => setSelectedItem(item);
-  const closeModal = () => setSelectedItem(null);
+  const handleItemClick = (item: GalleryItem, fromGsua: boolean) => {
+    setSelectedItem(item);
+    setIsGsuaImage(fromGsua);
+  };
+
+  const closeModal = () => {
+    setSelectedItem(null);
+    setIsGsuaImage(false);
+  };
 
   return (
     <div className="min-h-screen pt-24 pb-6 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
@@ -28,10 +36,9 @@ export default function GalleryPage() {
           heroImage="/Indo-AfricanScholarshipsLaunchEvent/1.jpg"
           description="Explore the highlights of our event through images and videos."
           items={indoAfricanItems}
-          onClick={handleItemClick}
+          onClick={(item) => handleItemClick(item, false)}
         />
 
-        {/* Divider */}
         <hr className="border-purple-700" />
 
         {/* GSUA Summit */}
@@ -41,13 +48,13 @@ export default function GalleryPage() {
           heroImage="/GSUA/1(1).jpg"
           description="Moments from the GSUA Summit event."
           items={gsuaItems}
-          onClick={handleItemClick}
+          onClick={(item) => handleItemClick(item, true)}
         />
 
         {/* Lightbox Modal */}
         {selectedItem && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
             onClick={closeModal}
           >
             <motion.div
@@ -55,40 +62,46 @@ export default function GalleryPage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="relative max-w-4xl w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+              className={`relative ${
+                isGsuaImage ? "w-full h-full" : "max-w-4xl h-auto"
+              } bg-gray-900 rounded-lg shadow-lg overflow-hidden`}
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/20 text-white hover:bg-black/40"
+                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/30 text-white hover:bg-black/50"
                 onClick={closeModal}
               >
                 ✕
               </button>
-              <div className="relative h-[500px]">
+              <div
+                className={`relative ${
+                  isGsuaImage ? "w-full h-full" : "h-[500px]"
+                }`}
+              >
                 {selectedItem.image && (
                   <Image
                     src={selectedItem.image}
                     alt={selectedItem.title || "Gallery Item"}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 )}
                 {selectedItem.video && (
                   <video
                     src={selectedItem.video}
                     controls
-                    className="min-w-full min-h-full object-cover pt-16 mt-34"
+                    className="min-w-full min-h-full object-cover"
                   />
                 )}
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">
-                  {selectedItem.title || null}
-                </h3>
-                {selectedItem.description && (
+              {!isGsuaImage && selectedItem.description && (
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-2">
+                    {selectedItem.title || null}
+                  </h3>
                   <p className="text-gray-400">{selectedItem.description}</p>
-                )}
-              </div>
+                </div>
+              )}
             </motion.div>
           </div>
         )}
@@ -220,6 +233,7 @@ const gsuaItems: GalleryItem[] = Array.from({ length: 68 }, (_, i) => ({
   description: null,
   image: `/GSUA/1(${i + 1}).jpg`,
 }));
+
 
 
 
