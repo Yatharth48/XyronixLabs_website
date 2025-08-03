@@ -48,9 +48,9 @@ export default function Navbar() {
           <Link href="/gallery" className="text-sm hover:text-purple-400 transition-colors">
             Gallery
           </Link>
-          <Button asChild variant="outline" className="bg-[#9fef00] text-black">
-            <Link href="/signin">Sign In</Link>
-          </Button>
+{/*           <Button asChild variant="outline" className="bg-[#9fef00] text-black"> */}
+{/*             <Link href="/signin">Sign In</Link> */}
+          // </Button>
         </nav>
 
         {/* Mobile Menu */}
@@ -84,9 +84,9 @@ export default function Navbar() {
               >
                 Gallery
               </Link>
-              <Button asChild variant="outline" className="w-full bg-[#9fef00]" onClick={() => setIsOpen(false)}>
-                <Link href="/signin">Sign In</Link>
-              </Button>
+{/*               <Button asChild variant="outline" className="w-full bg-[#9fef00]" onClick={() => setIsOpen(false)}> */}
+{/*                 <Link href="/signin">Sign In</Link> */}
+              // </Button>
             </nav>
           </SheetContent>
         </Sheet>
