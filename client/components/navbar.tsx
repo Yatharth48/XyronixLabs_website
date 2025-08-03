@@ -84,6 +84,9 @@ export default function Navbar() {
               >
                 Gallery
               </Link>
+              <Link href="/career" className="text-sm hover:text-purple-400 transition-colors">
+                Career
+              </Link>
 {/*               <Button asChild variant="outline" className="w-full bg-[#9fef00]" onClick={() => setIsOpen(false)}> */}
 {/*                 <Link href="/signin">Sign In</Link> */}
 {/*                 </Button>*/}
