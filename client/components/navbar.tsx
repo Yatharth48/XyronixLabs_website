@@ -50,7 +50,7 @@ export default function Navbar() {
           </Link>
 {/*           <Button asChild variant="outline" className="bg-[#9fef00] text-black"> */}
 {/*             <Link href="/signin">Sign In</Link> */}
-          // </Button>
+{/*          // </Button> */}
         </nav>
 
         {/* Mobile Menu */}
@@ -86,7 +86,7 @@ export default function Navbar() {
               </Link>
 {/*               <Button asChild variant="outline" className="w-full bg-[#9fef00]" onClick={() => setIsOpen(false)}> */}
 {/*                 <Link href="/signin">Sign In</Link> */}
-              // </Button>
+{/*                 </Button>*/}
             </nav>
           </SheetContent>
         </Sheet>
