@@ -1,0 +1,165 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "title": "Frontend Developer Intern",
+            "department": "Engineering",
+            "location": "Remote",
+            "type": "Full-time",
+            "experience": "0-1 years",
+            "salary": "Unpaid",
+            "description": "We're looking for a Frontend Developer intern to join our growing team. You'll be responsible for building beautiful, responsive web applications using modern technologies like React, Next.js, and TypeScript.",
+            "requirements": [
+                "0-1 years of experience with modern JavaScript frameworks",
+                "Strong understanding of React and its ecosystem",
+                "Experience with TypeScript and state management",
+                "Knowledge of modern CSS practices and frameworks",
+                "Experience with responsive design and cross-browser compatibility"
+            ],
+            "benefits": [
+                "Competitive salary and equity package",
+                "Remote-first culture",
+                "Flexible working hours",
+                "Health, dental, and vision insurance",
+                "401(k) matching",
+                "Professional development budget"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
+        },
+        {
+            "id": 2,
+            "title": "Content Writing Intern",
+            "department": "Design",
+            "location": "Remote",
+            "type": "Full-time",
+            "experience": "0-1 years",
+            "salary": "Unpaid",
+            "description": "Join our Content Creation team to create beautiful and intuitive user experiences. You'll work closely with product managers, engineers, and stakeholders to deliver exceptional design solutions.",
+            "requirements": [
+                "0-1 years of content writing experience",
+                "Strong portfolio showcasing UI/UX work",
+                "Proficiency in Figma and modern design tools",
+                "Experience with design systems",
+                "Strong communication and collaboration skills"
+            ],
+            "benefits": [
+                "Competitive salary",
+                "Hybrid work model",
+                "Health benefits",
+                "Annual learning stipend",
+                "Design conference attendance"
+            ],
+            "postedDate": "2024-03-19",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-25"
+        },
+        {
+            "id": 3,
+            "title": "Sales Executive (Freelance & Full-time)",
+            "department": "Sales",
+            "location": "Remote",
+            "type": "Freelance / Full-time",
+            "experience": "1-3 years",
+            "salary": "Commission-based / Negotiable",
+            "description": "We are seeking proactive Sales Executives (both Freelance and Full-time) to help drive our customer acquisition strategy and generate new business. Ideal candidates should have a passion for sales, excellent communication skills, and the ability to close deals across industries.",
+            "requirements": [
+                "1-3 years of experience in B2B or B2C sales",
+                "Strong verbal and written communication skills",
+                "Proven track record of achieving sales targets",
+                "Ability to manage client relationships independently",
+                "Experience with CRM tools is a plus"
+            ],
+            "benefits": [
+                "Performance-based incentives",
+                "Remote work flexibility",
+                "Opportunities for long-term engagement",
+                "Mentorship from experienced sales leaders",
+                "Access to company resources and tools"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
+        },
+        {
+            "id": 4,
+            "title": "Business Development Executive Intern",
+            "department": "Business Development",
+            "location": "Remote",
+            "type": "Internship",
+            "experience": "0-1 years",
+            "salary": "Unpaid / Certificate Provided",
+            "description": "We're looking for a highly motivated Business Development Executive Intern to identify partnership opportunities, build client relationships, and support growth initiatives. This is a great opportunity to learn strategic thinking and sales skills in a fast-paced startup environment.",
+            "requirements": [
+                "Excellent communication and interpersonal skills",
+                "Interest in market research and lead generation",
+                "Basic knowledge of CRM tools and MS Office/Google Suite",
+                "Strong organizational and time management abilities",
+                "0-1 years of relevant experience or freshers with high motivation"
+            ],
+            "benefits": [
+                "Letter of Recommendation and Internship Certificate",
+                "Remote work flexibility",
+                "Work closely with leadership",
+                "Opportunity to transition into a full-time role",
+                "Skill-building and hands-on learning experience"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
+        }
+    ]
+}
