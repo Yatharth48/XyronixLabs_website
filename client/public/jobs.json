@@ -160,6 +160,46 @@
                 }
             ],
             "applicationDeadline": "2024-04-30"
+        },
+        {
+            "id": 5,
+            "title": "Business Development Executive Intern",
+            "department": "Business Development",
+            "location": "Remote",
+            "type": "Internship",
+            "experience": "0-1 years",
+            "salary": "Unpaid / Certificate Provided",
+            "description": "We're looking for a highly motivated Business Development Executive Intern to identify partnership opportunities, build client relationships, and support growth initiatives. This is a great opportunity to learn strategic thinking and sales skills in a fast-paced startup environment.",
+            "requirements": [
+                "Excellent communication and interpersonal skills",
+                "Interest in market research and lead generation",
+                "Basic knowledge of CRM tools and MS Office/Google Suite",
+                "Strong organizational and time management abilities",
+                "0-1 years of relevant experience or freshers with high motivation"
+            ],
+            "benefits": [
+                "Letter of Recommendation and Internship Certificate",
+                "Remote work flexibility",
+                "Work closely with leadership",
+                "Opportunity to transition into a full-time role",
+                "Skill-building and hands-on learning experience"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
         }
     ]
 }
