@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
+import { useToast } from "@/components/ui/use-toast";
 
 type HiringTeamMember = {
   name: string;
@@ -44,6 +45,20 @@ type Job = {
   applicationDeadline: string;
 };
 
+type FormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  resume: string;
+  portfolio: string;
+  linkedin: string;
+  coverLetter: string;
+  agree: boolean;
+  jobTitle: string;
+  jobId: number;
+};
+
 export default function JobsPage() {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -53,6 +68,22 @@ export default function JobsPage() {
   const [isApplyDialogOpen, setIsApplyDialogOpen] = useState(false);
   const [applicationProgress, setApplicationProgress] = useState(0);
   const [activeFormStep, setActiveFormStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    resume: '',
+    portfolio: '',
+    linkedin: '',
+    coverLetter: '',
+    agree: false,
+    jobTitle: '',
+    jobId: 0
+  });
 
   // Fetch jobs from JSON
   useEffect(() => {
@@ -67,6 +98,16 @@ export default function JobsPage() {
     };
     fetchJobs();
   }, []);
+
+  useEffect(() => {
+    if (selectedJob) {
+      setFormData(prev => ({
+        ...prev,
+        jobTitle: selectedJob.title,
+        jobId: selectedJob.id
+      }));
+    }
+  }, [selectedJob]);
 
   const filteredJobs = jobs.filter((job) => {
     const matchesSearch = job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -90,36 +131,72 @@ export default function JobsPage() {
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: checked
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const formData = {
-      jobTitle: selectedJob?.title || '',
-      firstName: (document.getElementById('firstName') as HTMLInputElement)?.value.trim(),
-      lastName: (document.getElementById('lastName') as HTMLInputElement)?.value.trim(),
-      email: (document.getElementById('email') as HTMLInputElement)?.value.trim(),
-      phone: (document.getElementById('phone') as HTMLInputElement)?.value.trim(),
-      resumeLink: (document.getElementById('resume') as HTMLInputElement)?.value.trim(),
-      portfolioLink: (document.getElementById('portfolio') as HTMLInputElement)?.value.trim(),
-      linkedin: (document.getElementById('linkedin') as HTMLInputElement)?.value.trim(),
-      coverLetter: (document.getElementById('coverLetter') as HTMLTextAreaElement)?.value.trim(),
-      source: (document.getElementById('source') as HTMLSelectElement)?.value || 'Web Form',
-    };
+    setIsSubmitting(true);
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbwj-Y_0dWIU9iu6_SS9X2OkSGg2eWM2vyUnNaVNxnQLjJW5CexQoW5fEbAbAY8mOfrwXA/exec', {
+      // Replace with your Google Apps Script Web App URL
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbxX9GQ-U0DnqOtQSi75j72WLeOwnyo6tWlSlb173KJjjjbqAZTWdLGdW2-IzgrkCJnh/exec';
+      
+      const response = await fetch(scriptUrl, {
         method: 'POST',
+        mode: 'no-cors', // Important for Google Apps Script
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       });
 
-      alert('✅ Application submitted successfully!');
+      // Since we're using no-cors mode, we can't check the response status
+      // But we can assume it worked if we didn't get an error
       setIsApplyDialogOpen(false);
+      setActiveFormStep(1);
+      setApplicationProgress(0);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        resume: '',
+        portfolio: '',
+        linkedin: '',
+        coverLetter: '',
+        agree: false,
+        jobTitle: selectedJob?.title || '',
+        jobId: selectedJob?.id || 0
+      });
+
+      toast({
+        title: "Application Submitted!",
+        description: "Your application has been successfully submitted.",
+        variant: "default",
+      });
     } catch (error) {
-      console.error('Submission error:', error);
-      alert('❌ Failed to submit. Please try again.');
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "There was an error submitting your application. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -451,6 +528,8 @@ export default function JobsPage() {
                           placeholder="John" 
                           required 
                           className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
                         />
                       </div>
                       <div className="space-y-2">
@@ -460,6 +539,8 @@ export default function JobsPage() {
                           placeholder="Doe" 
                           required 
                           className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
                         />
                       </div>
                     </div>
@@ -472,6 +553,8 @@ export default function JobsPage() {
                         placeholder="you@example.com" 
                         required 
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
+                        value={formData.email}
+                        onChange={handleInputChange}
                       />
                     </div>
 
@@ -483,6 +566,8 @@ export default function JobsPage() {
                         placeholder="+1 (555) 000-0000" 
                         required 
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                       />
                     </div>
                   </div>
@@ -499,6 +584,8 @@ export default function JobsPage() {
                         placeholder="https://drive.google.com/file/d/your-resume" 
                         required 
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
+                        value={formData.resume}
+                        onChange={handleInputChange}
                       />
                       <p className="text-sm text-gray-500">
                         Provide a link to your resume (Google Drive, Dropbox, etc.)
@@ -512,6 +599,8 @@ export default function JobsPage() {
                         type="url" 
                         placeholder="https://yourportfolio.com" 
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
+                        value={formData.portfolio}
+                        onChange={handleInputChange}
                       />
                       <p className="text-sm text-gray-500">
                         Link to your portfolio website or project samples
@@ -525,6 +614,8 @@ export default function JobsPage() {
                         type="url" 
                         placeholder="https://linkedin.com/in/yourprofile" 
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
+                        value={formData.linkedin}
+                        onChange={handleInputChange}
                       />
                     </div>
                   </div>
@@ -540,6 +631,8 @@ export default function JobsPage() {
                         placeholder="Tell us why you're interested in this position and what makes you a great fit..."
                         className="min-h-[200px] bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                         required
+                        value={formData.coverLetter}
+                        onChange={handleInputChange}
                       />
                     </div>
 
@@ -549,6 +642,8 @@ export default function JobsPage() {
                         id="agree" 
                         className="mt-1 accent-purple-500 bg-gray-800 border-gray-700" 
                         required 
+                        checked={formData.agree}
+                        onChange={handleCheckboxChange}
                       />
                       <Label htmlFor="agree" className="font-normal text-gray-400">
                         I confirm that the information provided is accurate and complete.*
@@ -564,6 +659,7 @@ export default function JobsPage() {
                       type="button"
                       onClick={handlePrevStep}
                       className="border-gray-700 text-white hover:bg-gray-800/80"
+                      disabled={isSubmitting}
                     >
                       Back
                     </Button>
@@ -574,6 +670,7 @@ export default function JobsPage() {
                       type="button"
                       onClick={handleNextStep}
                       className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-500/90 hover:to-purple-600/90 text-white shadow-lg shadow-purple-500/20"
+                      disabled={isSubmitting}
                     >
                       Continue
                     </Button>
@@ -581,8 +678,9 @@ export default function JobsPage() {
                     <Button 
                       type="submit"
                       className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-500/90 hover:to-purple-600/90 text-white shadow-lg shadow-purple-500/20"
+                      disabled={isSubmitting}
                     >
-                      Submit Application
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
                     </Button>
                   )}
                 </DialogFooter>
@@ -610,6 +708,60 @@ export default function JobsPage() {
         }
         .animate-float-delay-2 {
           animation: float 12s ease-in-out 4s infinite;
+        },
+                @keyframes float {
+          0%, 100% {
+            transform: translateY(0) translateX(0);
+          }
+          50% {
+            transform: translateY(-20px) translateX(10px);
+          }
+        }
+        @keyframes gradient-shift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes scroll-indicator {
+          0%, 100% { transform: translateY(0); opacity: 0.4; }
+          50% { transform: translateY(5px); opacity: 1; }
+        }
+        .animate-float {
+          animation: float 8s ease-in-out infinite;
+        }
+        .animate-float-delay {
+          animation: float 10s ease-in-out 2s infinite;
+        }
+        .animate-float-delay-2 {
+          animation: float 12s ease-in-out 4s infinite;
+        }
+        .animate-gradient-shift {
+          animation: gradient-shift 5s ease infinite;
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.5s ease-out forwards;
+        }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out forwards;
+        }
+        .animate-scroll-indicator {
+          animation: scroll-indicator 2s ease infinite;
+        }
+        .delay-100 {
+          animation-delay: 0.1s;
+        }
+        .text-gradient {
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       `}</style>
     </div>
