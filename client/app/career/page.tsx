@@ -154,7 +154,7 @@ export default function JobsPage() {
     try {
       // Replace with your Google Apps Script Web App URL
       const scriptUrl = 'https://script.google.com/macros/s/AKfycbxX9GQ-U0DnqOtQSi75j72WLeOwnyo6tWlSlb173KJjjjbqAZTWdLGdW2-IzgrkCJnh/exec';
-      
+
       const response = await fetch(scriptUrl, {
         method: 'POST',
         mode: 'no-cors', // Important for Google Apps Script
@@ -269,8 +269,8 @@ export default function JobsPage() {
         <div className="grid gap-6">
           {filteredJobs.length > 0 ? (
             filteredJobs.map((job) => (
-              <Card 
-                key={job.id} 
+              <Card
+                key={job.id}
                 className="p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-purple-500/50 group hover:border-l-purple-500 cursor-pointer bg-gray-900/80 border-gray-800 hover:bg-gray-900/60 backdrop-blur-sm"
                 onClick={() => setSelectedJob(job)}
               >
@@ -278,7 +278,7 @@ export default function JobsPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                        <Building2 className="h-5 w-5 text-purple-400" />
+                        <img src="/icon.png" alt="icon" className="h-5 w-5" />
                       </div>
                       <div>
                         <span className="text-sm font-medium text-gray-500">{job.company}</span>
@@ -290,7 +290,7 @@ export default function JobsPage() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-4">
                       <Badge variant="outline" className="flex items-center gap-1 bg-gray-800 text-gray-300 border-gray-700">
                         <Briefcase className="h-3 w-3 text-purple-400" />
@@ -309,16 +309,16 @@ export default function JobsPage() {
                         {job.salary}
                       </Badge>
                     </div>
-                    
+
                     <p className="text-gray-400 line-clamp-2 mb-4">{job.description}</p>
-                    
+
                     <div className="flex items-center gap-4 text-sm text-gray-500">
                       <span>Posted: {job.postedDate}</span>
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row md:flex-col gap-3">
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="group-hover:border-purple-500 group-hover:text-purple-400 bg-transparent border-gray-700 text-white hover:bg-gray-800/80"
                       onClick={(e) => {
                         e.stopPropagation();
@@ -327,7 +327,7 @@ export default function JobsPage() {
                     >
                       View Details
                     </Button>
-                    <Button 
+                    <Button
                       className="group-hover:bg-purple-500/90 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-500/90 hover:to-purple-600/90 text-white shadow-lg shadow-purple-500/20"
                       onClick={(e) => {
                         e.stopPropagation();
@@ -346,7 +346,7 @@ export default function JobsPage() {
               <div className="flex flex-col items-center justify-center gap-4">
                 <Search className="h-12 w-12 text-gray-500/50" />
                 <h3 className="text-xl font-medium text-white">No jobs found</h3>
-                <Button 
+                <Button
                   variant="outline"
                   className="text-white border-gray-700 hover:bg-gray-800/80 hover:text-white"
                   onClick={() => {
@@ -368,9 +368,10 @@ export default function JobsPage() {
             <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-gray-900 border-gray-800">
               <DialogHeader>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mt-1">
-                    <Building2 className="h-6 w-6 text-purple-400" />
+                  <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                    <img src="/icon.png" alt="icon" className="h-5 w-5" />
                   </div>
+
                   <div>
                     <DialogTitle className="text-2xl text-left text-white">{selectedJob.title}</DialogTitle>
                     <DialogDescription className="text-purple-400 text-left">{selectedJob.company}</DialogDescription>
@@ -391,9 +392,9 @@ export default function JobsPage() {
                   </div>
                 </div>
               </DialogHeader>
-              
+
               <Separator className="my-4 bg-gray-800" />
-              
+
               <div className="space-y-8">
                 {/* Job Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -412,8 +413,8 @@ export default function JobsPage() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-gray-500" />
-                      <a 
-                        href={`mailto:${selectedJob.contactEmail}`} 
+                      <a
+                        href={`mailto:${selectedJob.contactEmail}`}
                         className="hover:underline text-purple-400 flex items-center gap-1"
                       >
                         {selectedJob.contactEmail}
@@ -476,16 +477,16 @@ export default function JobsPage() {
                   </div>
                 </div>
               </div>
-              
+
               <DialogFooter className="mt-6">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={() => setSelectedJob(null)}
                   className="border-gray-700 text-white hover:bg-gray-800/80"
                 >
                   Close
                 </Button>
-                <Button 
+                <Button
                   onClick={() => {
                     setIsApplyDialogOpen(true);
                   }}
@@ -515,7 +516,7 @@ export default function JobsPage() {
                   </div>
                 </div>
               </DialogHeader>
-              
+
               <form className="space-y-6" onSubmit={handleSubmit}>
                 {activeFormStep === 1 && (
                   <div className="space-y-6">
@@ -523,10 +524,10 @@ export default function JobsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="firstName" className="text-gray-400">First Name*</Label>
-                        <Input 
-                          id="firstName" 
-                          placeholder="John" 
-                          required 
+                        <Input
+                          id="firstName"
+                          placeholder="John"
+                          required
                           className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                           value={formData.firstName}
                           onChange={handleInputChange}
@@ -534,24 +535,24 @@ export default function JobsPage() {
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName" className="text-gray-400">Last Name*</Label>
-                        <Input 
-                          id="lastName" 
-                          placeholder="Doe" 
-                          required 
+                        <Input
+                          id="lastName"
+                          placeholder="Doe"
+                          required
                           className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                           value={formData.lastName}
                           onChange={handleInputChange}
                         />
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-gray-400">Email*</Label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="you@example.com" 
-                        required 
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="you@example.com"
+                        required
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                         value={formData.email}
                         onChange={handleInputChange}
@@ -560,11 +561,11 @@ export default function JobsPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-gray-400">Phone Number*</Label>
-                      <Input 
-                        id="phone" 
-                        type="tel" 
-                        placeholder="+1 (555) 000-0000" 
-                        required 
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="+1 (555) 000-0000"
+                        required
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                         value={formData.phone}
                         onChange={handleInputChange}
@@ -578,11 +579,11 @@ export default function JobsPage() {
                     <h3 className="font-medium text-white">Professional Information</h3>
                     <div className="space-y-2">
                       <Label htmlFor="resume" className="text-gray-400">Resume Link*</Label>
-                      <Input 
-                        id="resume" 
-                        type="url" 
-                        placeholder="https://drive.google.com/file/d/your-resume" 
-                        required 
+                      <Input
+                        id="resume"
+                        type="url"
+                        placeholder="https://drive.google.com/file/d/your-resume"
+                        required
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                         value={formData.resume}
                         onChange={handleInputChange}
@@ -594,10 +595,10 @@ export default function JobsPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="portfolio" className="text-gray-400">Portfolio Link (Optional)</Label>
-                      <Input 
-                        id="portfolio" 
-                        type="url" 
-                        placeholder="https://yourportfolio.com" 
+                      <Input
+                        id="portfolio"
+                        type="url"
+                        placeholder="https://yourportfolio.com"
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                         value={formData.portfolio}
                         onChange={handleInputChange}
@@ -609,10 +610,10 @@ export default function JobsPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="linkedin" className="text-gray-400">LinkedIn Profile (Optional)</Label>
-                      <Input 
-                        id="linkedin" 
-                        type="url" 
-                        placeholder="https://linkedin.com/in/yourprofile" 
+                      <Input
+                        id="linkedin"
+                        type="url"
+                        placeholder="https://linkedin.com/in/yourprofile"
                         className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-purple-500"
                         value={formData.linkedin}
                         onChange={handleInputChange}
@@ -637,11 +638,11 @@ export default function JobsPage() {
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <input 
-                        type="checkbox" 
-                        id="agree" 
-                        className="mt-1 accent-purple-500 bg-gray-800 border-gray-700" 
-                        required 
+                      <input
+                        type="checkbox"
+                        id="agree"
+                        className="mt-1 accent-purple-500 bg-gray-800 border-gray-700"
+                        required
                         checked={formData.agree}
                         onChange={handleCheckboxChange}
                       />
@@ -654,8 +655,8 @@ export default function JobsPage() {
 
                 <DialogFooter className="flex flex-col sm:flex-row gap-3">
                   {activeFormStep > 1 && (
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       type="button"
                       onClick={handlePrevStep}
                       className="border-gray-700 text-white hover:bg-gray-800/80"
@@ -666,7 +667,7 @@ export default function JobsPage() {
                   )}
                   <div className="flex-1" />
                   {activeFormStep < 3 ? (
-                    <Button 
+                    <Button
                       type="button"
                       onClick={handleNextStep}
                       className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-500/90 hover:to-purple-600/90 text-white shadow-lg shadow-purple-500/20"
@@ -675,7 +676,7 @@ export default function JobsPage() {
                       Continue
                     </Button>
                   ) : (
-                    <Button 
+                    <Button
                       type="submit"
                       className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-500/90 hover:to-purple-600/90 text-white shadow-lg shadow-purple-500/20"
                       disabled={isSubmitting}
