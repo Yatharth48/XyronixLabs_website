@@ -278,7 +278,7 @@ export default function JobsPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                        <img src="/icon.png" alt="icon" className="h-5 w-5" />
+                        <img src="/icon.png" alt="icon" className="h-10 w-10" />
                       </div>
                       <div>
                         <span className="text-sm font-medium text-gray-500">{job.company}</span>
@@ -369,7 +369,7 @@ export default function JobsPage() {
               <DialogHeader>
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                    <img src="/icon.png" alt="icon" className="h-5 w-5" />
+                    <img src="/icon.png" alt="icon" className="h-10 w-10" />
                   </div>
 
                   <div>
