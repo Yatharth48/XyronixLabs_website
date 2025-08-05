@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "Xyronix Labs Official Website",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -72,6 +72,7 @@
     "tsparticles-slim": "^2.12.0",
     "vaul": "^0.9.6",
     "zod": "^3.24.1"
+    "lottie-react": "2.4.1"
   },
   "devDependencies": {
     "@types/node": "^22",
