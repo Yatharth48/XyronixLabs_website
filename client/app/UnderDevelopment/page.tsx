@@ -50,4 +50,4 @@ const UnderDevelopmentPage = () => {
   );
 };
 
-export default UnderDevelopment;
+export default UnderDevelopmentPage;
