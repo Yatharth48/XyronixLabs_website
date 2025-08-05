@@ -369,7 +369,7 @@ export default function JobsPage() {
               <DialogHeader>
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                    <img src="/icon.png" alt="icon" className="h-10 w-10" />
+                    <img src="/logo/Group8(1).png" alt="icon" className="h-10 w-10" />
                   </div>
 
                   <div>
