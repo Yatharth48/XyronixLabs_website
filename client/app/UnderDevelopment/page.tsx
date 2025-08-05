@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Lottie from 'lottie-react';
 
-const underdevelopmentpage = () => {
+const UnderDevelopmentPage = () => {
   const [backgroundData, setBackgroundData] = React.useState<any>(null);
   const [foregroundData, setForegroundData] = React.useState<any>(null);
 
@@ -50,4 +50,4 @@ const underdevelopmentpage = () => {
   );
 };
 
-export default underdevelopmentpage;
+export default UnderDevelopment;
