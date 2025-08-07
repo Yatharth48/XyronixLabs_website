@@ -1,0 +1,240 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "title": "Frontend Developer Intern",
+            "department": "Engineering",
+            "location": "Remote",
+            "type": "Full-time",
+            "experience": "0-1 years",
+            "salary": "Unpaid",
+            "description": [
+                "We are looking for a passionate and self-motivated Frontend Developer Intern to join our growing development team. This internship is designed to provide hands-on experience in building responsive, interactive, and user-friendly web applications using modern technologies such as React, Next.js, and TypeScript. As a Frontend Developer Intern, you will work alongside experienced engineers and designers to contribute to real-world projects, helping shape the look, feel, and functionality of our digital products. This role offers a strong foundation for individuals aspiring to build a career in frontend development while gaining exposure to industry-standard practices, agile workflows, and product-focused engineering.",
+                "Your responsibilities will include assisting in the design and implementation of scalable and maintainable frontend components, translating UI/UX designs into clean and functional code, and ensuring consistent performance across different devices and browsers. You will work closely with our design team to maintain visual fidelity, accuracy, and responsiveness. In collaboration with the backend development team, you will also integrate APIs to fetch and display dynamic content, while ensuring seamless user interactions. We value clean code, attention to detail, and a user-centric mindset, and we expect our interns to contribute actively to code reviews, discussions, and testing processes.",
+                "This internship is best suited for candidates with a strong foundational knowledge of HTML, CSS, and JavaScript, as well as a basic understanding of modern frontend frameworks. Experience or familiarity with React.js is essential, while knowledge of Next.js and TypeScript is an added advantage. You should be comfortable working with version control systems such as Git, and open to learning new libraries, tools, and methodologies as needed. An interest in user experience, design systems, and accessibility will be appreciated, as we aim to build inclusive and intuitive products.",
+                "We are looking for individuals who are proactive, curious, and eager to grow in a collaborative and fast-paced environment. You should have strong problem-solving abilities, good communication skills, and a positive attitude toward receiving feedback and improving your work. This role will give you an opportunity to learn from a team of experienced professionals while gaining meaningful experience that will enhance your resume and technical portfolio.",
+                "At the end of the internship, you will have a strong understanding of frontend development principles, practical experience building web applications, and familiarity with agile product development cycles. You will receive a certificate of completion and may be considered for a pre-placement offer based on performance and available roles. This is an excellent opportunity to gain industry exposure, sharpen your technical skills, and lay the groundwork for a successful career in web development."
+            ],
+            "requirements": [
+                "0-1 years of experience with modern JavaScript frameworks",
+                "Strong understanding of React and its ecosystem",
+                "Experience with TypeScript and state management",
+                "Knowledge of modern CSS practices and frameworks",
+                "Experience with responsive design and cross-browser compatibility"
+            ],
+            "benefits": [
+                "Competitive salary and equity package",
+                "Remote-first culture",
+                "Flexible working hours",
+                "Health, dental, and vision insurance",
+                "401(k) matching",
+                "Professional development budget"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
+        },
+        {
+            "id": 2,
+            "title": "Content Writing Intern",
+            "department": "Design",
+            "location": "Remote",
+            "type": "Full-time",
+            "experience": "0-1 years",
+            "salary": "Unpaid",
+            "description": [
+                "We are seeking a creative, detail-oriented individual to join our Content Creation team, where design meets purpose and innovation. As a member of this team, you will play an integral role in crafting beautiful, intuitive, and user-centric experiences that align with our brand vision and product goals. You will collaborate closely with product managers, engineers, designers, and key stakeholders to understand user needs, business objectives, and technical constraints, translating them into compelling visual and content-driven solutions that enhance the overall user journey.",
+                "Your responsibilities will involve designing and developing engaging digital content, including user interfaces, interactive components, microcopy, and layouts that communicate effectively with end users. You will contribute to the evolution of our product design system, ensuring consistency in tone, style, and user experience across platforms. Working cross-functionally, you will gather and apply feedback iteratively to ensure your designs are not only visually appealing but also functional, accessible, and aligned with user expectations.",
+                "This role is ideal for someone with a strong eye for visual aesthetics, a passion for usability, and an understanding of how thoughtful content design can elevate the user experience. You should be comfortable working in collaborative, agile environments, where feedback is frequent, and design decisions are made based on user research, analytics, and team input. A proactive mindset, excellent communication skills, and the ability to think from the user's perspective are key to succeeding in this position.",
+                "To thrive in this role, you should have foundational experience with design tools such as Figma, Adobe XD, Sketch, or similar platforms, and a working knowledge of design principles such as hierarchy, typography, color theory, and layout. Experience or interest in creating responsive designs for web and mobile platforms is a plus. You will also be expected to present your ideas clearly through wireframes, mockups, and prototypes, while being receptive to constructive feedback and open to iteration.",
+                "As part of our Content Creation team, you will have the opportunity to shape the way users interact with our products, contributing to features from early-stage concepts through to final execution. You will learn how to balance creativity with functionality, participate in user testing sessions, and adapt your work based on both quantitative and qualitative insights.",
+                "Whether you're a designer with a passion for storytelling, a UX enthusiast eager to make an impact, or a student looking to apply your design thinking in real-world projects, this position offers a platform for meaningful growth. By the end of your experience with us, you will have developed a strong portfolio, refined your collaboration and communication skills, and deepened your understanding of user-centered design in a product-driven environment."
+            ],
+            "requirements": [
+                "0-1 years of content writing experience",
+                "Strong portfolio showcasing UI/UX work",
+                "Proficiency in Figma and modern design tools",
+                "Experience with design systems",
+                "Strong communication and collaboration skills"
+            ],
+            "benefits": [
+                "Competitive salary",
+                "Hybrid work model",
+                "Health benefits",
+                "Annual learning stipend",
+                "Design conference attendance"
+            ],
+            "postedDate": "2024-03-19",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-25"
+        },
+        {
+            "id": 3,
+            "title": "Sales Executive (Freelance & Full-time)",
+            "department": "Sales",
+            "location": "Remote",
+            "type": "Freelance / Full-time",
+            "experience": "1-3 years",
+            "salary": "Commission-based / Negotiable",
+            "description": [
+                "We are actively seeking highly motivated and proactive Sales Executives—both Freelance and Full-time—to join our dynamic and fast-paced team. This role is essential to the execution of our customer acquisition strategy and will play a key part in identifying, engaging, and converting new business opportunities across a variety of industries. As a Sales Executive, you will be responsible for driving revenue growth by developing and managing relationships with prospective clients, understanding their business needs, and presenting tailored solutions that align with our offerings.",
+                "In this role, you will be expected to take initiative, build and maintain a robust pipeline, and consistently follow through with prospects to close deals. You will engage with decision-makers, conduct product or service presentations, and negotiate contracts, always with a focus on delivering value and establishing long-term relationships. Whether you are working independently as a freelance sales partner or as part of our in-house sales team, your goal will be to meet and exceed performance targets and contribute meaningfully to our growth trajectory.",
+                "We are looking for individuals who are passionate about sales and thrive in performance-driven environments. The ideal candidate should possess excellent verbal and written communication skills, a strong sense of professionalism, and the ability to build rapport with diverse clients. A results-oriented mindset, coupled with strong time management and organizational abilities, is essential for success in this position. Prior experience in B2B or B2C sales, lead generation, or business development will be highly valued, although we also welcome enthusiastic individuals with a proven ability to learn quickly and adapt to changing market dynamics.",
+                "Our company operates in a collaborative and supportive environment that values initiative, creativity, and accountability. As a Sales Executive, you will receive the necessary support, training, and resources to excel in your role, along with a competitive compensation structure. Freelance Sales Executives will enjoy the flexibility to work at their own pace and schedule, while Full-time Executives will benefit from structured targets, access to internal tools and systems, and opportunities for long-term growth within the organization.",
+                "This role offers exposure to various sectors and business models, providing a rich learning experience and a chance to develop a broad professional network. You will gain insights into client acquisition strategies, market positioning, and product-market fit, equipping you with skills that are highly relevant and transferable across industries.",
+                "If you are energetic, persuasive, and eager to make a tangible impact, we invite you to be part of our growing sales force. This is more than a sales role—it is an opportunity to contribute to a forward-thinking company, build meaningful client relationships, and grow your career in a results-oriented environment."
+            ],
+            "requirements": [
+                "1-3 years of experience in B2B or B2C sales",
+                "Strong verbal and written communication skills",
+                "Proven track record of achieving sales targets",
+                "Ability to manage client relationships independently",
+                "Experience with CRM tools is a plus"
+            ],
+            "benefits": [
+                "Performance-based incentives",
+                "Remote work flexibility",
+                "Opportunities for long-term engagement",
+                "Mentorship from experienced sales leaders",
+                "Access to company resources and tools"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
+        },
+        {
+            "id": 4,
+            "title": "Business Development Executive Intern",
+            "department": "Business Development",
+            "location": "Remote",
+            "type": "Internship",
+            "experience": "0-1 years",
+            "salary": "Unpaid / Certificate Provided",
+            "description": [
+                "We are seeking a highly motivated and results-driven Business Development Executive Intern to join our growing team. This internship offers a unique opportunity to gain hands-on experience in identifying new business opportunities, building strategic partnerships, and supporting key growth initiatives within a dynamic startup environment. As a Business Development Executive Intern, you will play a vital role in expanding our client base, supporting revenue-generating activities, and contributing to the overall business strategy through research, outreach, and collaboration with internal stakeholders.",
+                "In this role, you will be responsible for identifying potential leads and partnership opportunities through various channels such as market research, social media, industry databases, and networking events. You will reach out to prospects, initiate conversations, and help maintain relationships with both new and existing clients. Working closely with the business development and marketing teams, you will help craft compelling pitches, assist in preparing proposals, and coordinate meetings and follow-ups. Additionally, you will contribute to competitor analysis, market mapping, and other strategic insights that inform decision-making and business planning.",
+                "This internship is ideal for individuals who are looking to build a strong foundation in business development, client relationship management, and sales strategy. You will be exposed to the full lifecycle of business development—from lead generation to deal closure—and gain a deep understanding of how startups scale, acquire customers, and build long-term partnerships. You will also have the opportunity to interact with senior leadership and cross-functional teams, offering valuable exposure to the operational and strategic aspects of business growth.",
+                "The ideal candidate should possess strong communication and interpersonal skills, a proactive approach to problem-solving, and the ability to thrive in a fast-paced, evolving work environment. An analytical mindset, attention to detail, and eagerness to learn are essential. Prior experience in sales, marketing, or customer-facing roles (including academic or extracurricular projects) is a plus but not mandatory. Most importantly, we are looking for candidates who are curious, ambitious, and excited to contribute meaningfully to a growing company.",
+                "Throughout the internship, you will receive mentorship, constructive feedback, and opportunities to take ownership of tasks that directly impact business outcomes. You will develop critical soft and hard skills, including strategic thinking, negotiation, market analysis, and customer engagement. Upon successful completion of the internship, you will receive a certificate and letter of recommendation. High-performing interns may be considered for full-time roles based on performance and organizational needs.",
+                "This is an excellent opportunity for aspiring professionals looking to begin their career in business development, sales, or strategy, and gain real-world exposure to the startup ecosystem."
+            ],
+            "requirements": [
+                "Excellent communication and interpersonal skills",
+                "Interest in market research and lead generation",
+                "Basic knowledge of CRM tools and MS Office/Google Suite",
+                "Strong organizational and time management abilities",
+                "0-1 years of relevant experience or freshers with high motivation"
+            ],
+            "benefits": [
+                "Letter of Recommendation and Internship Certificate",
+                "Remote work flexibility",
+                "Work closely with leadership",
+                "Opportunity to transition into a full-time role",
+                "Skill-building and hands-on learning experience"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
+        },
+        {
+            "id": 5,
+            "title": "Business Development Executive Intern",
+            "department": "Business Development",
+            "location": "Remote",
+            "type": "Internship",
+            "experience": "0-1 years",
+            "salary": "Unpaid / Certificate Provided",
+            "description": [
+                "We are seeking a highly motivated and enthusiastic Business Development Executive Intern to join our fast-paced and dynamic team. This internship presents an excellent opportunity for individuals who are eager to gain practical experience in business strategy, client relationship management, and sales development within a high-growth startup environment. As a Business Development Executive Intern, you will play a crucial role in identifying new partnership opportunities, initiating and nurturing client relationships, and actively supporting the company’s overall growth initiatives.",
+                "Your primary responsibilities will include conducting market research to identify potential partners and target clients, analyzing industry trends, and supporting outreach campaigns. You will work closely with the business development team to generate leads, qualify prospects, and assist in the preparation of proposals, presentations, and other business communications. This role offers a front-row seat to the strategic decision-making process and an opportunity to contribute directly to initiatives that drive revenue, brand presence, and market expansion.",
+                "The ideal candidate is someone who is self-driven, goal-oriented, and has a keen interest in sales, strategy, and customer engagement. You should be comfortable reaching out to potential clients, communicating value propositions clearly, and following up diligently to maintain strong business relationships. Strong interpersonal and communication skills are essential, as you will be expected to interact with a variety of stakeholders and represent the company in a professional and persuasive manner.",
+                "Throughout the internship, you will gain hands-on experience in B2B outreach, client communications, CRM tools, and sales funnel management. You will learn how to structure partnership proposals, track performance metrics, and support high-level strategic discussions. You will also have the chance to collaborate across departments—including marketing, product, and operations—ensuring a well-rounded understanding of how different functions contribute to business growth.",
+                "We are looking for candidates who are currently pursuing or have recently completed a degree in Business, Marketing, Economics, or a related field. While prior experience in business development or sales is not required, any background in client-facing roles, cold calling, lead generation, or market research will be considered an advantage. Above all, we are seeking individuals who are eager to learn, adaptable to change, and ready to contribute meaningfully from day one.",
+                "This internship is designed to help you build core skills in strategic thinking, negotiation, and business communication. Successful interns will leave the program with a solid foundation in business development and a strong understanding of how startups grow and scale. Upon completion, you will receive an internship certificate and a letter of recommendation. Outstanding performance may also lead to consideration for a full-time opportunity within the organization.",
+                "If you are ambitious, resourceful, and looking to gain real-world experience in a business-oriented role, we invite you to be part of our journey to build impactful partnerships and accelerate company growth."
+            ],
+            "requirements": [
+                "Excellent communication and interpersonal skills",
+                "Interest in market research and lead generation",
+                "Basic knowledge of CRM tools and MS Office/Google Suite",
+                "Strong organizational and time management abilities",
+                "0-1 years of relevant experience or freshers with high motivation"
+            ],
+            "benefits": [
+                "Letter of Recommendation and Internship Certificate",
+                "Remote work flexibility",
+                "Work closely with leadership",
+                "Opportunity to transition into a full-time role",
+                "Skill-building and hands-on learning experience"
+            ],
+            "postedDate": "2024-03-20",
+            "company": "Xyronix Labs",
+            "contactEmail": "hiring@xyronixlabs.com",
+            "hiringTeam": [
+                {
+                    "name": "Aditya Seth",
+                    "role": "Founder & CEO",
+                    "avatar": "/avatars/aditya.jpg"
+                },
+                {
+                    "name": "Hemaang Mehra",
+                    "role": "Co-Founder & COO",
+                    "avatar": "/avatars/hemaang.jpg"
+                }
+            ],
+            "applicationDeadline": "2024-04-30"
+        }
+    ]
+}
